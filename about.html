@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rifby — About</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="About Rifby — the team behind your AI automation. Outcome-based pricing, full IP handoff, no generic chatbots.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; font-family: "DM Sans", system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+
+  :root {
+    --a-bg:       #0a1428;
+    --a-bg2:      #071023;
+    --a-fg:       #eaf2ff;
+    --a-sub:      rgba(234,242,255,0.62);
+    --a-line:     rgba(234,242,255,0.12);
+    --a-chip:     rgba(234,242,255,0.06);
+    --a-invert-bg: #eaf2ff;
+    --a-invert-fg: #0a1428;
+    --a-ok:       #3da5f5;
+  }
+  body.light {
+    --a-bg:       #ffffff;
+    --a-bg2:      #f4f6f9;
+    --a-fg:       #0a1428;
+    --a-sub:      rgba(10,20,40,0.60);
+    --a-line:     rgba(10,20,40,0.10);
+    --a-chip:     rgba(10,20,40,0.04);
+    --a-invert-bg: #0a1428;
+    --a-invert-fg: #ffffff;
+    --a-ok:       #1b6fd1;
+  }
+  body { background: var(--a-bg); color: var(--a-fg); }
+</style>
+</head>
+<body class="light">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="logo-navy" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="
+        0 0 0 0 0.0392
+        0 0 0 0 0.0784
+        0 0 0 0 0.1569
+        0 0 0 1 0"/>
+    </filter>
+  </defs>
+</svg>
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/shared.jsx" data-plugins="transform-react-jsx-source"></script>
+<script type="text/babel" src="components/case-shared.jsx" data-plugins="transform-react-jsx-source"></script>
+<script type="text/babel" src="components/about-a.jsx" data-plugins="transform-react-jsx-source"></script>
+
+<script type="text/babel" data-plugins="transform-react-jsx-source">
+  ReactDOM.createRoot(document.getElementById('root')).render(<AboutA />);
+</script>
+
+</body>
+</html>
