@@ -62,9 +62,10 @@ const AmbientBg = () => {
       const palette = getPalette();
       const ambientOn = window.__ambientOn !== false;
       const intensity = typeof window.__ambientIntensity === 'number' ? window.__ambientIntensity : 1;
-      // Pull live bg color from CSS var so the canvas always matches the chosen background
-      const cssBg = getComputedStyle(document.documentElement).getPropertyValue('--a-bg').trim() || palette.bg;
-      const accent = getComputedStyle(document.documentElement).getPropertyValue('--brand-blue').trim() || '#3da5f5';
+      // Pull live bg color from CSS var so the canvas always matches the chosen background.
+      // Read from body, not :root, because the light palette is defined on body.light.
+      const cssBg = getComputedStyle(document.body).getPropertyValue('--a-bg').trim() || palette.bg;
+      const accent = getComputedStyle(document.body).getPropertyValue('--brand-blue').trim() || '#3da5f5';
 
       // wash bg
       ctx.fillStyle = cssBg;
