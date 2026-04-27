@@ -8,47 +8,43 @@
 @media (max-width: 768px) {
   html, body { overflow-x: hidden; }
 
-  /* ── Horizontal padding: 56px → 20px ── */
+  /* ── Horizontal section padding 56px → 20px ────────────────── */
+  /* Covers every "padding: <vert> 56px [<bottom>]" pattern in JSX */
+  #root [style*="padding: 0 56px"],
+  #root [style*="padding: 14px 56px"],
   #root [style*="padding: 22px 56px"],
+  #root [style*="padding: 32px 56px"],
   #root [style*="padding: 40px 56px"],
+  #root [style*="padding: 48px 56px"],
   #root [style*="padding: 56px 56px"],
+  #root [style*="padding: 64px 56px"],
+  #root [style*="padding: 72px 56px"],
+  #root [style*="padding: 80px 56px"],
+  #root [style*="padding: 96px 56px"],
   #root [style*="padding: 120px 56px"],
   #root [style*="padding: 140px 56px"] {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
-  /* ── Vertical padding: tighten section spacing ── */
-  #root [style*="padding: 22px 56px"] {
-    padding-top: 14px !important;
-    padding-bottom: 14px !important;
-  }
-  #root [style*="padding: 56px 56px 72px"] {
-    padding-top: 32px !important;
-    padding-bottom: 48px !important;
-  }
-  #root [style*="padding: 120px 56px"] {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
-  }
-  #root [style*="padding: 120px 56px 96px"] {
-    padding-top: 56px !important;
-    padding-bottom: 48px !important;
-  }
-  #root [style*="padding: 140px 56px"] {
-    padding-top: 72px !important;
-    padding-bottom: 72px !important;
-  }
-  #root [style*="padding: 56px 56px 32px"] {
-    padding-top: 40px !important;
-    padding-bottom: 24px !important;
-  }
-  #root [style*="padding: 40px 56px"] {
-    padding-top: 28px !important;
-    padding-bottom: 28px !important;
-  }
+  /* ── Vertical section padding tightens too ─────────────────── */
+  #root [style*="padding: 22px 56px"]   { padding-top: 14px !important; padding-bottom: 14px !important; }
+  #root [style*="padding: 40px 56px"]   { padding-top: 28px !important; padding-bottom: 28px !important; }
+  #root [style*="padding: 48px 56px 120px"] { padding-top: 32px !important; padding-bottom: 56px !important; }
+  #root [style*="padding: 56px 56px 32px"] { padding-top: 40px !important; padding-bottom: 24px !important; }
+  #root [style*="padding: 56px 56px 72px"] { padding-top: 32px !important; padding-bottom: 48px !important; }
+  #root [style*="padding: 64px 56px 48px"] { padding-top: 40px !important; padding-bottom: 32px !important; }
+  #root [style*="padding: 64px 56px"]   { padding-top: 40px !important; padding-bottom: 40px !important; }
+  #root [style*="padding: 80px 56px 56px"] { padding-top: 48px !important; padding-bottom: 32px !important; }
+  #root [style*="padding: 96px 56px 48px"] { padding-top: 48px !important; padding-bottom: 32px !important; }
+  #root [style*="padding: 96px 56px 72px"] { padding-top: 48px !important; padding-bottom: 48px !important; }
+  #root [style*="padding: 96px 56px"]   { padding-top: 48px !important; padding-bottom: 48px !important; }
+  #root [style*="padding: 120px 56px 96px"] { padding-top: 56px !important; padding-bottom: 48px !important; }
+  #root [style*="padding: 120px 56px"]  { padding-top: 64px !important; padding-bottom: 64px !important; }
+  #root [style*="padding: 140px 56px"]  { padding-top: 72px !important; padding-bottom: 72px !important; }
+  #root [style*="padding: 0 56px 48px"] { padding-top: 0 !important; padding-bottom: 32px !important; }
 
-  /* ── Nav: hide middle link list (Work / Approach / etc.) ── */
+  /* ── Nav: hide middle link list on mobile ──────────────────── */
   #root [style*="padding: 22px 56px"] > div[style*="gap: 34px"] {
     display: none !important;
   }
@@ -56,101 +52,136 @@
     gap: 12px !important;
   }
 
-  /* ── Hero <h1> (was 128px) ── */
+  /* ── Display headings (h1) ─────────────────────────────────── */
   #root h1 {
-    font-size: clamp(34px, 9vw, 56px) !important;
-    letter-spacing: -1.2px !important;
+    font-size: clamp(32px, 8.5vw, 52px) !important;
+    letter-spacing: -1px !important;
     line-height: 1.04 !important;
     max-width: 100% !important;
+    word-break: break-word !important;
   }
 
-  /* ── Section <h2> (was 56px on most, 120px on CTA) ── */
+  /* ── Section headings (h2) ─────────────────────────────────── */
   #root h2 {
-    font-size: clamp(28px, 7.5vw, 40px) !important;
-    letter-spacing: -0.8px !important;
-    line-height: 1.08 !important;
+    font-size: clamp(26px, 7vw, 36px) !important;
+    letter-spacing: -0.6px !important;
+    line-height: 1.1 !important;
     max-width: 100% !important;
   }
 
-  /* ── All multi-column grids → single column ── */
+  /* ── Multi-column grids → single column ────────────────────── */
+  #root [style*="grid-template-columns: 1.1fr 1fr 1fr"],
   #root [style*="grid-template-columns: 1.2fr 1fr"],
-  #root [style*="grid-template-columns: 1fr 2fr"],
-  #root [style*="grid-template-columns: 2fr 1fr"],
-  #root [style*="grid-template-columns: 2fr 1fr 1fr 1fr"],
-  #root [style*="grid-template-columns: 1fr 1fr 1fr 1fr"],
-  #root [style*="grid-template-columns: 180px 1fr 360px 120px"],
-  #root [style*="grid-template-columns: repeat(3, 1fr)"],
+  #root [style*="grid-template-columns: 1fr 1.6fr"],
   #root [style*="grid-template-columns: 1fr 1fr 1fr"],
-  #root [style*="grid-template-columns: 1fr 1fr"] {
+  #root [style*="grid-template-columns: 1fr 1fr"],
+  #root [style*="grid-template-columns: 1fr 2fr"],
+  #root [style*="grid-template-columns: 240px 1fr"],
+  #root [style*="grid-template-columns: 2fr 1fr 1fr 1fr"],
+  #root [style*="grid-template-columns: 2fr 1fr"],
+  #root [style*="grid-template-columns: 180px 1fr 360px 120px"],
+  #root [style*="grid-template-columns: repeat(2, 1fr)"],
+  #root [style*="grid-template-columns: repeat(3, 1fr)"],
+  #root [style*="grid-template-columns: repeat(4, 1fr)"],
+  #root [style*="grid-template-columns: repeat(6, 1fr)"] {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
 
-  /* ── Flex rows that should stack vertically ── */
+  /* Footer: 4 cols → 2 cols (cleaner than full stack) */
+  #root [style*="padding: 56px 56px 32px"] [style*="grid-template-columns: 2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Keep narrow icon+text layouts as 2-col (don't stack tiny gutters) */
+  #root [style*="grid-template-columns: 28px 1fr"],
+  #root [style*="grid-template-columns: 48px 1fr"],
+  #root [style*="grid-template-columns: 70px 1fr"] {
+    /* keep as is */
+  }
+
+  /* ── Flex rows that should stack vertically ────────────────── */
   #root [style*="display: flex"][style*="gap: 64px"],
   #root [style*="display: flex"][style*="gap: 48px"] {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 24px !important;
   }
+  #root [style*="gap: 14px"] { flex-wrap: wrap !important; }
 
-  /* CTA buttons row should wrap, not overflow */
-  #root [style*="gap: 14px"] {
-    flex-wrap: wrap !important;
-  }
-
-  /* ── Scale down large display sizes ── */
-  #root [style*="font-size: 128px"] { font-size: clamp(34px, 9vw, 56px) !important; }
-  #root [style*="font-size: 120px"] { font-size: clamp(34px, 9vw, 56px) !important; }
-  #root [style*="font-size: 72px"]  { font-size: 40px !important; }
-  #root [style*="font-size: 56px"]  { font-size: clamp(28px, 7.5vw, 40px) !important; }
-  #root [style*="font-size: 52px"]  { font-size: 32px !important; }
+  /* ── Display font sizes ────────────────────────────────────── */
+  #root [style*="font-size: 144px"] { font-size: clamp(34px, 9.5vw, 56px) !important; }
+  #root [style*="font-size: 128px"] { font-size: clamp(32px, 8.5vw, 52px) !important; }
+  #root [style*="font-size: 120px"] { font-size: clamp(32px, 8.5vw, 52px) !important; }
+  #root [style*="font-size: 96px"]  { font-size: clamp(28px, 8vw, 44px) !important; }
+  #root [style*="font-size: 72px"]  { font-size: 36px !important; }
+  #root [style*="font-size: 64px"]  { font-size: clamp(28px, 7vw, 38px) !important; }
+  #root [style*="font-size: 56px"]  { font-size: clamp(26px, 7vw, 36px) !important; }
+  #root [style*="font-size: 52px"]  { font-size: 30px !important; }
   #root [style*="font-size: 44px"]  { font-size: 24px !important; line-height: 1.25 !important; }
-  #root [style*="font-size: 32px"]  { font-size: 22px !important; }
-  #root [style*="font-size: 28px"]  { font-size: 22px !important; }
-  #root [style*="font-size: 24px"]  { font-size: 20px !important; }
-  #root [style*="font-size: 22px"]  { font-size: 18px !important; }
+  #root [style*="font-size: 40px"]  { font-size: 24px !important; }
+  #root [style*="font-size: 36px"]  { font-size: 22px !important; }
+  #root [style*="font-size: 32px"]  { font-size: 20px !important; }
+  #root [style*="font-size: 28px"]  { font-size: 20px !important; }
+  #root [style*="font-size: 24px"]  { font-size: 19px !important; }
+  #root [style*="font-size: 22px"]  { font-size: 17px !important; }
   #root [style*="font-size: 20px"]  { font-size: 16px !important; }
+  #root [style*="font-size: 19px"]  { font-size: 16px !important; }
   #root [style*="font-size: 18px"]  { font-size: 16px !important; }
 
-  /* Logo row strap line: keep readable */
-  #root [style*="max-width: 120px"] { max-width: 100% !important; }
+  /* ── Letter-spacing softens at smaller sizes ───────────────── */
+  #root [style*="letter-spacing: -6"],
+  #root [style*="letter-spacing: -5"],
+  #root [style*="letter-spacing: -4"],
+  #root [style*="letter-spacing: -3"] { letter-spacing: -0.8px !important; }
+  #root [style*="letter-spacing: -2"] { letter-spacing: -0.6px !important; }
+  #root [style*="letter-spacing: -1.2"] { letter-spacing: -0.4px !important; }
 
-  /* Footer: 4 cols → 2 cols feels tighter than 1 col */
-  #root [style*="padding: 56px 56px 32px"] [style*="grid-template-columns: 2fr 1fr 1fr 1fr"] {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 28px !important;
+  /* ── Cap large max-widths so content can flow ──────────────── */
+  #root [style*="max-width: 1300"],
+  #root [style*="max-width: 1200"],
+  #root [style*="max-width: 1100"],
+  #root [style*="max-width: 1000"],
+  #root [style*="max-width: 900"],
+  #root [style*="max-width: 800"],
+  #root [style*="max-width: 720"],
+  #root [style*="max-width: 640"],
+  #root [style*="max-width: 560"],
+  #root [style*="max-width: 520"] {
+    max-width: 100% !important;
   }
 
-  /* Quote big text */
-  #root [style*="letter-spacing: -1.2"] {
-    letter-spacing: -0.4px !important;
-  }
-  #root [style*="letter-spacing: -2"],
-  #root [style*="letter-spacing: -2px"],
-  #root [style*="letter-spacing: -4.5"],
-  #root [style*="letter-spacing: -5"] {
-    letter-spacing: -0.8px !important;
+  /* ── Sticky/large fixed widths ─────────────────────────────── */
+  #root [style*="width: 480"],
+  #root [style*="width: 560"],
+  #root [style*="width: 640"] {
+    width: 100% !important;
   }
 
-  /* Case-study row image placeholders shouldn't be huge */
-  #root [style*="aspect-ratio: 16 / 7"] {
-    aspect-ratio: 16 / 9 !important;
+  /* ── Misc — keep image placeholders proportional ───────────── */
+  #root [style*="aspect-ratio: 16 / 7"] { aspect-ratio: 16 / 9 !important; }
+
+  /* ── Position fixed nav row should still wrap nicely ───────── */
+  #root [style*="padding: 22px 56px"] > * {
+    flex-shrink: 0 !important;
   }
 }
 
-/* Slightly different bracket: tablet (768–1024) — softer overrides */
+/* Tablet (769–1024px): softer horizontal padding only ─────────── */
 @media (min-width: 769px) and (max-width: 1024px) {
+  #root [style*="padding: 0 56px"],
   #root [style*="padding: 22px 56px"],
   #root [style*="padding: 40px 56px"],
+  #root [style*="padding: 48px 56px"],
   #root [style*="padding: 56px 56px"],
+  #root [style*="padding: 64px 56px"],
+  #root [style*="padding: 80px 56px"],
+  #root [style*="padding: 96px 56px"],
   #root [style*="padding: 120px 56px"],
   #root [style*="padding: 140px 56px"] {
     padding-left: 32px !important;
     padding-right: 32px !important;
   }
-  #root h1 {
-    font-size: clamp(56px, 9vw, 96px) !important;
-    letter-spacing: -2.4px !important;
-  }
+  #root h1 { font-size: clamp(56px, 9vw, 96px) !important; letter-spacing: -2.4px !important; }
 }
