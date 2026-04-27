@@ -1,0 +1,156 @@
+/* ============================================================
+   Mobile responsive overrides
+   The site uses inline-styled JSX components designed for a
+   1440px desktop layout. These rules target the inline styles
+   via attribute selectors and override them with !important.
+   ============================================================ */
+
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+
+  /* ── Horizontal padding: 56px → 20px ── */
+  #root [style*="padding: 22px 56px"],
+  #root [style*="padding: 40px 56px"],
+  #root [style*="padding: 56px 56px"],
+  #root [style*="padding: 120px 56px"],
+  #root [style*="padding: 140px 56px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* ── Vertical padding: tighten section spacing ── */
+  #root [style*="padding: 22px 56px"] {
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+  }
+  #root [style*="padding: 56px 56px 72px"] {
+    padding-top: 32px !important;
+    padding-bottom: 48px !important;
+  }
+  #root [style*="padding: 120px 56px"] {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  #root [style*="padding: 120px 56px 96px"] {
+    padding-top: 56px !important;
+    padding-bottom: 48px !important;
+  }
+  #root [style*="padding: 140px 56px"] {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+  #root [style*="padding: 56px 56px 32px"] {
+    padding-top: 40px !important;
+    padding-bottom: 24px !important;
+  }
+  #root [style*="padding: 40px 56px"] {
+    padding-top: 28px !important;
+    padding-bottom: 28px !important;
+  }
+
+  /* ── Nav: hide middle link list (Work / Approach / etc.) ── */
+  #root [style*="padding: 22px 56px"] > div[style*="gap: 34px"] {
+    display: none !important;
+  }
+  #root [style*="padding: 22px 56px"] {
+    gap: 12px !important;
+  }
+
+  /* ── Hero <h1> (was 128px) ── */
+  #root h1 {
+    font-size: clamp(34px, 9vw, 56px) !important;
+    letter-spacing: -1.2px !important;
+    line-height: 1.04 !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Section <h2> (was 56px on most, 120px on CTA) ── */
+  #root h2 {
+    font-size: clamp(28px, 7.5vw, 40px) !important;
+    letter-spacing: -0.8px !important;
+    line-height: 1.08 !important;
+    max-width: 100% !important;
+  }
+
+  /* ── All multi-column grids → single column ── */
+  #root [style*="grid-template-columns: 1.2fr 1fr"],
+  #root [style*="grid-template-columns: 1fr 2fr"],
+  #root [style*="grid-template-columns: 2fr 1fr"],
+  #root [style*="grid-template-columns: 2fr 1fr 1fr 1fr"],
+  #root [style*="grid-template-columns: 1fr 1fr 1fr 1fr"],
+  #root [style*="grid-template-columns: 180px 1fr 360px 120px"],
+  #root [style*="grid-template-columns: repeat(3, 1fr)"],
+  #root [style*="grid-template-columns: 1fr 1fr 1fr"],
+  #root [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* ── Flex rows that should stack vertically ── */
+  #root [style*="display: flex"][style*="gap: 64px"],
+  #root [style*="display: flex"][style*="gap: 48px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 24px !important;
+  }
+
+  /* CTA buttons row should wrap, not overflow */
+  #root [style*="gap: 14px"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* ── Scale down large display sizes ── */
+  #root [style*="font-size: 128px"] { font-size: clamp(34px, 9vw, 56px) !important; }
+  #root [style*="font-size: 120px"] { font-size: clamp(34px, 9vw, 56px) !important; }
+  #root [style*="font-size: 72px"]  { font-size: 40px !important; }
+  #root [style*="font-size: 56px"]  { font-size: clamp(28px, 7.5vw, 40px) !important; }
+  #root [style*="font-size: 52px"]  { font-size: 32px !important; }
+  #root [style*="font-size: 44px"]  { font-size: 24px !important; line-height: 1.25 !important; }
+  #root [style*="font-size: 32px"]  { font-size: 22px !important; }
+  #root [style*="font-size: 28px"]  { font-size: 22px !important; }
+  #root [style*="font-size: 24px"]  { font-size: 20px !important; }
+  #root [style*="font-size: 22px"]  { font-size: 18px !important; }
+  #root [style*="font-size: 20px"]  { font-size: 16px !important; }
+  #root [style*="font-size: 18px"]  { font-size: 16px !important; }
+
+  /* Logo row strap line: keep readable */
+  #root [style*="max-width: 120px"] { max-width: 100% !important; }
+
+  /* Footer: 4 cols → 2 cols feels tighter than 1 col */
+  #root [style*="padding: 56px 56px 32px"] [style*="grid-template-columns: 2fr 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+
+  /* Quote big text */
+  #root [style*="letter-spacing: -1.2"] {
+    letter-spacing: -0.4px !important;
+  }
+  #root [style*="letter-spacing: -2"],
+  #root [style*="letter-spacing: -2px"],
+  #root [style*="letter-spacing: -4.5"],
+  #root [style*="letter-spacing: -5"] {
+    letter-spacing: -0.8px !important;
+  }
+
+  /* Case-study row image placeholders shouldn't be huge */
+  #root [style*="aspect-ratio: 16 / 7"] {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+/* Slightly different bracket: tablet (768–1024) — softer overrides */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #root [style*="padding: 22px 56px"],
+  #root [style*="padding: 40px 56px"],
+  #root [style*="padding: 56px 56px"],
+  #root [style*="padding: 120px 56px"],
+  #root [style*="padding: 140px 56px"] {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+  #root h1 {
+    font-size: clamp(56px, 9vw, 96px) !important;
+    letter-spacing: -2.4px !important;
+  }
+}
