@@ -49,6 +49,12 @@ const AboutA = () => {
   },
   {
     n: '03',
+    title: 'Custom Software',
+    sub: 'Apps & portals',
+    d: 'Bespoke web apps, internal tools, and client portals for when off-the-shelf software cannot do the job. Production-grade, documented, and owned by you.'
+  },
+  {
+    n: '04',
     title: 'Data-Driven Insights',
     sub: 'Dashboards & decisions',
     d: 'The system you ship is only as good as what it tells you. Custom analytics, real-time dashboards, and the runbooks to act on them.'
@@ -177,7 +183,7 @@ const AboutA = () => {
         </div>
 
         <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
+          display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
           gap: 0, borderTop: `1px solid ${CS.line}`
         }}>
           {services.map((s, i) =>

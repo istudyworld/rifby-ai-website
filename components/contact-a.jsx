@@ -327,7 +327,7 @@ const BookingCard = () => {
             display: 'flex', alignItems: 'center', gap: 6,
           }}>
             <span style={{
-              width: 6, height: 6, borderRadius: '50%', background: '#16a34a', display: 'inline-block',
+              width: 6, height: 6, borderRadius: '50%', background: '#3EB1FF', display: 'inline-block',
             }} />
             Online
           </div>
@@ -337,7 +337,7 @@ const BookingCard = () => {
       {/* Calendly inline embed */}
       <div
         className="calendly-inline-widget"
-        data-url={`${CALENDLY}?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=0a1428&primary_color=0a1428`}
+        data-url={`${CALENDLY}?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=0a1428&primary_color=085698`}
         style={{ minWidth: 320, height: 700, borderTop: `1px solid ${CS.line}` }}
       />
     </div>

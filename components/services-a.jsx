@@ -226,15 +226,21 @@ const ServicesA = () => {
                   fontFamily: CS.mono, fontSize: 11, color: CS.sub,
                   letterSpacing: 1.2, textTransform: 'uppercase', marginBottom: 20,
                 }}>
-                  Schematic
+                  Snapshot
                 </div>
-                <div style={{
-                  padding: 24, border: `1px solid ${CS.line}`, borderRadius: 12,
-                  background: CS.chip, minHeight: 200, color: CS.fg,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
-                  <ServiceDiagram kind={s.diagram} />
-                </div>
+                {s.image
+                  ? <img src={s.image} alt={s.name} style={{
+                      width: '100%', height: 'auto', display: 'block', borderRadius: 10,
+                      WebkitMaskImage: 'radial-gradient(120% 122% at 50% 48%, #000 56%, transparent 100%)',
+                      maskImage: 'radial-gradient(120% 122% at 50% 48%, #000 56%, transparent 100%)'
+                    }} />
+                  : <div style={{
+                      border: `1px solid ${CS.line}`, borderRadius: 12, background: CS.chip,
+                      padding: 24, minHeight: 200, color: CS.fg,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      <ServiceDiagram kind={s.diagram} />
+                    </div>}
                 <div style={{ marginTop: 24 }}>
                   <div style={{
                     fontFamily: CS.mono, fontSize: 11, color: CS.sub,

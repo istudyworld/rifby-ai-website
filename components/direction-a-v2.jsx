@@ -107,12 +107,12 @@ const AHero = () =>
         <div style={{ display: 'flex', gap: 14, marginTop: 32 }}>
           <a href="https://calendly.com/joseph-rifby/30min" target="_blank" rel="noopener noreferrer" style={{
           padding: '18px 28px',
-          background: '#0a1428',
-          color: '#ffffff',
+          background: A.invBg,
+          color: A.invFg,
           border: 'none',
           borderRadius: 999, fontFamily: A.sans, fontSize: 15, fontWeight: 600,
           cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8,
-          boxShadow: '0 8px 24px rgba(10,20,40,0.28)', textDecoration: 'none'
+          boxShadow: '0 8px 24px rgba(8,86,152,0.28)', textDecoration: 'none'
         }}>
             Book a strategy call <Icon name="arrow-right" size={16} color="currentColor" />
           </a>
@@ -152,18 +152,30 @@ const AHero = () =>
       )}
       </div>
     </div>
+
+    <div style={{
+    marginTop: 56, borderRadius: 16, overflow: 'hidden',
+    boxShadow: '0 30px 80px -48px rgba(8,86,152,0.40)'
+  }}>
+      <video autoPlay muted loop playsInline poster="assets/hero-poster.jpg"
+      style={{ width: '100%', height: 'auto', display: 'block', aspectRatio: '16 / 9', objectFit: 'cover' }}>
+        <source src="assets/hero-loop-v2.mp4" type="video/mp4" />
+      </video>
+    </div>
   </div>;
 
 
 const ALogos = () => null;
 
 const AServices = () => {
+  const [active, setActive] = React.useState(0);
+  const [hover, setHover] = React.useState(-1);
   const items = [
   { k: '01', t: 'Custom AI agents', d: 'Agents that handle the long-tail of workflows no SaaS tool covers — scoped, tested, owned by you.', icon: 'cpu' },
-  { k: '02', t: 'Workflow automation', d: 'n8n, Zapier, custom — the right tool for the job. We pick based on what you want to maintain.', icon: 'flow' },
-  { k: '03', t: 'Analytics dashboards', d: 'Real-time visibility on the metrics your automations affect. No vanity KPIs.', icon: 'chart' },
-  { k: '04', t: 'Data infrastructure', d: 'Clean pipelines and retrievable context so your agents actually get smarter, not just busier.', icon: 'db' },
-  { k: '05', t: 'AI strategy & roadmapping', d: 'A TMAP — technical mutual action plan — with deliverables, timelines, and what we will not do.', icon: 'grid' },
+  { k: '02', t: 'Custom software', d: 'Bespoke web apps, internal tools, and client portals for when off-the-shelf software cannot do the job.', icon: 'code' },
+  { k: '03', t: 'Workflow automation', d: 'n8n, Zapier, or custom — the right tool for the job. We pick based on what you want to maintain.', icon: 'workflow' },
+  { k: '04', t: 'Analytics & data', d: 'Clean pipelines plus real-time dashboards on the metrics your automations actually move. No vanity KPIs.', icon: 'bar-chart' },
+  { k: '05', t: 'AI strategy & roadmapping', d: 'A TMAP — technical mutual action plan — with deliverables, timelines, and what we will not do.', icon: 'target' },
   { k: '06', t: 'Handoff & ownership', d: 'You own the IP on day one. Full docs, training, runbooks. Leave any time.', icon: 'shield' }];
 
   return (
@@ -184,23 +196,42 @@ const AServices = () => {
         display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)',
         borderTop: `1px solid ${A.line}`, borderLeft: `1px solid ${A.line}`
       }}>
-        {items.map((it, i) =>
-        <div key={i} style={{
+        {items.map((it, i) => {
+        const on = active === i;
+        const hot = hover === i;
+        return (
+        <div key={i}
+          onClick={() => setActive(i)}
+          onMouseEnter={() => setHover(i)}
+          onMouseLeave={() => setHover(-1)}
+          style={{
           padding: '36px 32px 40px',
           borderBottom: `1px solid ${A.line}`,
           borderRight: `1px solid ${A.line}`,
-          display: 'flex', flexDirection: 'column', gap: 16, minHeight: 260
+          display: 'flex', flexDirection: 'column', gap: 16, minHeight: 260,
+          cursor: 'pointer',
+          background: on ? 'rgba(8,86,152,0.06)' : hot ? A.chip : 'transparent',
+          boxShadow: on ? `inset 0 0 0 2px ${A.ok}` : 'none',
+          transition: 'background .18s ease, box-shadow .18s ease'
         }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-              <div style={{ fontFamily: A.mono, fontSize: 11, color: A.sub, letterSpacing: 0.5 }}>{it.k}</div>
-              <Icon name={it.icon} size={22} color="currentColor" stroke={1.2} />
+              <div style={{ fontFamily: A.mono, fontSize: 11, color: on ? A.ok : A.sub, letterSpacing: 0.5 }}>{it.k}</div>
+              <Icon name={it.icon} size={22} color={on ? A.ok : 'currentColor'} stroke={1.2} />
             </div>
             <div style={{ flex: 1 }}>
               <h3 style={{ margin: '0 0 12px', fontFamily: A.sans, fontSize: 24, letterSpacing: -0.5, color: A.fg, fontWeight: 500 }}>{it.t}</h3>
               <p style={{ margin: 0, fontFamily: A.sans, fontSize: 14, lineHeight: 1.55, color: A.sub }}>{it.d}</p>
             </div>
+            <div style={{
+              display: 'flex', alignItems: 'center', gap: 6,
+              fontFamily: A.mono, fontSize: 11, letterSpacing: 0.6, textTransform: 'uppercase',
+              color: A.ok, opacity: on ? 1 : 0, transition: 'opacity .18s ease'
+            }}>
+              Selected <Icon name="arrow-right" size={12} color="currentColor" />
+            </div>
           </div>
-        )}
+        );
+        })}
       </div>
     </div>);
 
@@ -219,6 +250,15 @@ const AProcess = () => {
         <h2 style={{ margin: 0, fontFamily: A.sans, fontSize: 56, lineHeight: 1, letterSpacing: -2, color: A.fg, fontWeight: 500, maxWidth: 800 }}>
           From kickoff to production,<span style={{ fontFamily: A.serif, fontStyle: 'italic', color: A.sub }}> in three moves.</span>
         </h2>
+      </div>
+
+      <div style={{ marginBottom: 32 }}>
+        <img src="assets/process-flow.jpg" alt="Rifby three-stage delivery pipeline: discover, design, automate"
+        style={{
+          width: '100%', height: 'auto', display: 'block',
+          WebkitMaskImage: 'radial-gradient(115% 130% at 50% 50%, #000 52%, transparent 100%)',
+          maskImage: 'radial-gradient(115% 130% at 50% 50%, #000 52%, transparent 100%)'
+        }} />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32 }}>
