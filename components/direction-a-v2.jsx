@@ -153,13 +153,15 @@ const AHero = () =>
       </div>
     </div>
 
-    <div style={{
-    marginTop: 64, borderRadius: 14, overflow: 'hidden',
-    border: `1px solid ${A.line}`, boxShadow: '0 30px 80px -50px rgba(8,86,152,0.45)'
-  }}>
-      <video autoPlay muted loop playsInline poster="assets/hero-workspace.jpg"
-      style={{ width: '100%', height: 'auto', display: 'block', aspectRatio: '16 / 9', objectFit: 'cover' }}>
-        <source src="assets/hero-loop.mp4" type="video/mp4" />
+    <div style={{ marginTop: 56 }}>
+      <video autoPlay muted loop playsInline poster="assets/hero-poster.jpg"
+      style={{
+        width: '100%', height: 'auto', display: 'block',
+        aspectRatio: '16 / 9', objectFit: 'cover',
+        WebkitMaskImage: 'radial-gradient(125% 118% at 50% 42%, #000 60%, transparent 100%)',
+        maskImage: 'radial-gradient(125% 118% at 50% 42%, #000 60%, transparent 100%)'
+      }}>
+        <source src="assets/hero-loop-v2.mp4" type="video/mp4" />
       </video>
     </div>
   </div>;
@@ -252,12 +254,13 @@ const AProcess = () => {
         </h2>
       </div>
 
-      <div style={{
-      marginBottom: 56, borderRadius: 14, overflow: 'hidden',
-      border: `1px solid ${A.line}`, background: A.bg2
-    }}>
+      <div style={{ marginBottom: 32 }}>
         <img src="assets/process-flow.jpg" alt="Rifby three-stage delivery pipeline: discover, design, automate"
-        style={{ width: '100%', height: 'auto', display: 'block' }} />
+        style={{
+          width: '100%', height: 'auto', display: 'block',
+          WebkitMaskImage: 'radial-gradient(115% 130% at 50% 50%, #000 52%, transparent 100%)',
+          maskImage: 'radial-gradient(115% 130% at 50% 50%, #000 52%, transparent 100%)'
+        }} />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32 }}>

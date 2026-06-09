@@ -228,16 +228,19 @@ const ServicesA = () => {
                 }}>
                   Snapshot
                 </div>
-                <div style={{
-                  border: `1px solid ${CS.line}`, borderRadius: 12,
-                  background: CS.chip, color: CS.fg, overflow: 'hidden',
-                }}>
-                  {s.image
-                    ? <img src={s.image} alt={s.name} style={{ width: '100%', height: 'auto', display: 'block' }} />
-                    : <div style={{ padding: 24, minHeight: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <ServiceDiagram kind={s.diagram} />
-                      </div>}
-                </div>
+                {s.image
+                  ? <img src={s.image} alt={s.name} style={{
+                      width: '100%', height: 'auto', display: 'block', borderRadius: 10,
+                      WebkitMaskImage: 'radial-gradient(120% 122% at 50% 48%, #000 56%, transparent 100%)',
+                      maskImage: 'radial-gradient(120% 122% at 50% 48%, #000 56%, transparent 100%)'
+                    }} />
+                  : <div style={{
+                      border: `1px solid ${CS.line}`, borderRadius: 12, background: CS.chip,
+                      padding: 24, minHeight: 200, color: CS.fg,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      <ServiceDiagram kind={s.diagram} />
+                    </div>}
                 <div style={{ marginTop: 24 }}>
                   <div style={{
                     fontFamily: CS.mono, fontSize: 11, color: CS.sub,
