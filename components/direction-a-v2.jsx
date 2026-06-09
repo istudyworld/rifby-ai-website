@@ -107,12 +107,12 @@ const AHero = () =>
         <div style={{ display: 'flex', gap: 14, marginTop: 32 }}>
           <a href="https://calendly.com/joseph-rifby/30min" target="_blank" rel="noopener noreferrer" style={{
           padding: '18px 28px',
-          background: '#0a1428',
-          color: '#ffffff',
+          background: A.invBg,
+          color: A.invFg,
           border: 'none',
           borderRadius: 999, fontFamily: A.sans, fontSize: 15, fontWeight: 600,
           cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 8,
-          boxShadow: '0 8px 24px rgba(10,20,40,0.28)', textDecoration: 'none'
+          boxShadow: '0 8px 24px rgba(8,86,152,0.28)', textDecoration: 'none'
         }}>
             Book a strategy call <Icon name="arrow-right" size={16} color="currentColor" />
           </a>
@@ -152,6 +152,14 @@ const AHero = () =>
       )}
       </div>
     </div>
+
+    <div style={{
+    marginTop: 64, borderRadius: 14, overflow: 'hidden',
+    border: `1px solid ${A.line}`, boxShadow: '0 30px 80px -50px rgba(8,86,152,0.45)'
+  }}>
+      <img src="assets/hero-workspace.jpg" alt="A Rifby operator running AI automations from a modern workspace"
+      style={{ width: '100%', height: 'auto', display: 'block', aspectRatio: '16 / 9', objectFit: 'cover' }} />
+    </div>
   </div>;
 
 
@@ -160,10 +168,10 @@ const ALogos = () => null;
 const AServices = () => {
   const items = [
   { k: '01', t: 'Custom AI agents', d: 'Agents that handle the long-tail of workflows no SaaS tool covers — scoped, tested, owned by you.', icon: 'cpu' },
-  { k: '02', t: 'Workflow automation', d: 'n8n, Zapier, custom — the right tool for the job. We pick based on what you want to maintain.', icon: 'flow' },
-  { k: '03', t: 'Analytics dashboards', d: 'Real-time visibility on the metrics your automations affect. No vanity KPIs.', icon: 'chart' },
-  { k: '04', t: 'Data infrastructure', d: 'Clean pipelines and retrievable context so your agents actually get smarter, not just busier.', icon: 'db' },
-  { k: '05', t: 'AI strategy & roadmapping', d: 'A TMAP — technical mutual action plan — with deliverables, timelines, and what we will not do.', icon: 'grid' },
+  { k: '02', t: 'Custom software', d: 'Bespoke web apps, internal tools, and client portals for when off-the-shelf software cannot do the job.', icon: 'code' },
+  { k: '03', t: 'Workflow automation', d: 'n8n, Zapier, or custom — the right tool for the job. We pick based on what you want to maintain.', icon: 'workflow' },
+  { k: '04', t: 'Analytics & data', d: 'Clean pipelines plus real-time dashboards on the metrics your automations actually move. No vanity KPIs.', icon: 'bar-chart' },
+  { k: '05', t: 'AI strategy & roadmapping', d: 'A TMAP — technical mutual action plan — with deliverables, timelines, and what we will not do.', icon: 'target' },
   { k: '06', t: 'Handoff & ownership', d: 'You own the IP on day one. Full docs, training, runbooks. Leave any time.', icon: 'shield' }];
 
   return (
@@ -219,6 +227,14 @@ const AProcess = () => {
         <h2 style={{ margin: 0, fontFamily: A.sans, fontSize: 56, lineHeight: 1, letterSpacing: -2, color: A.fg, fontWeight: 500, maxWidth: 800 }}>
           From kickoff to production,<span style={{ fontFamily: A.serif, fontStyle: 'italic', color: A.sub }}> in three moves.</span>
         </h2>
+      </div>
+
+      <div style={{
+      marginBottom: 56, borderRadius: 14, overflow: 'hidden',
+      border: `1px solid ${A.line}`, background: A.bg2
+    }}>
+        <img src="assets/process-flow.jpg" alt="Rifby three-stage delivery pipeline: discover, design, automate"
+        style={{ width: '100%', height: 'auto', display: 'block' }} />
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32 }}>

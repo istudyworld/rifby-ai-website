@@ -30,6 +30,7 @@ window.SERVICES = [
     stack: ['Miro', 'Notion', 'OpenAI', 'Custom survey tooling'],
     // Diagram: simple funnel — many candidates in, ranked few out.
     diagram: 'funnel',
+    image: 'assets/service-strategy.jpg',
   },
   {
     n: '02',
@@ -58,9 +59,39 @@ window.SERVICES = [
     ],
     stack: ['n8n', 'OpenAI', 'Claude', 'Postgres', 'Retool', 'Twilio', 'Stripe', 'HubSpot'],
     diagram: 'network',
+    image: 'assets/service-automation.jpg',
   },
   {
     n: '03',
+    slug: 'custom-software',
+    name: 'Custom Software',
+    tag: 'Built around you, owned by you',
+    lead: 'Bespoke web apps, internal tools, and client portals for when off-the-shelf software cannot do the job.',
+    description:
+      'When a spreadsheet or a generic SaaS tool is holding your team back, we design and build production-grade software on a modern stack: web apps, internal tools, dashboards, and customer portals. Documented, deployed, and yours at handover.',
+    deliverables: [
+      'Product scope + UX flows mapped before any code',
+      'Web app, internal tool, or client portal built to fit',
+      'Auth, payments, and the integrations you already use',
+      'Deployment + observability: logs, uptime, error alerts',
+      'Handover docs, training, and full source ownership',
+    ],
+    forWho: [
+      'Teams forcing a spreadsheet to do a job it was never built for',
+      'Businesses outgrowing off-the-shelf SaaS',
+      'Founders who need a custom tool but not a full in-house dev team',
+    ],
+    process: [
+      { step: 'Wk 1', title: 'Scope', body: 'Flows + spec, agreed.' },
+      { step: 'Wk 2–4', title: 'Build', body: 'Iterative ship, weekly demos.' },
+      { step: 'Wk 4+', title: 'Launch', body: 'Deploy, train, hand off.' },
+    ],
+    stack: ['Next.js', 'React', 'Node', 'Postgres', 'Vercel', 'Stripe'],
+    diagram: 'network',
+    image: 'assets/service-software.jpg',
+  },
+  {
+    n: '04',
     slug: 'data-insights',
     name: 'Data-Driven Insights',
     tag: 'Turn logs into leverage',
@@ -85,11 +116,12 @@ window.SERVICES = [
     ],
     stack: ['BigQuery / Postgres', 'dbt', 'Metabase', 'Python', 'n8n'],
     diagram: 'pipeline',
+    image: 'assets/service-data.jpg',
   },
 ];
 
 window.SERVICES_META = {
-  headline: 'Three services.',
+  headline: 'Four services.',
   headlineItalic: 'One outcome:',
   headlineCont: 'time back.',
   subhead:
