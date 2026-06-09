@@ -28,6 +28,9 @@
 @media (max-width: 768px) {
   html, body { overflow-x: hidden; }
 
+  /* Process pipeline: hide the horizontal connector rail once cards stack */
+  #root [style*="left: 16.667%"] { display: none !important; }
+
   /* ── Horizontal section padding 56px → 20px ────────────────── */
   /* Covers every "padding: <vert> 56px [<bottom>]" pattern in JSX */
   #root [style*="padding: 0 56px"],

@@ -252,38 +252,48 @@ const AProcess = () => {
         </h2>
       </div>
 
-      <div style={{ marginBottom: 32 }}>
-        <img src="assets/process-flow.jpg" alt="Rifby three-stage delivery pipeline: discover, design, automate"
-        style={{
-          width: '100%', height: 'auto', display: 'block',
-          WebkitMaskImage: 'radial-gradient(115% 130% at 50% 50%, #000 52%, transparent 100%)',
-          maskImage: 'radial-gradient(115% 130% at 50% 50%, #000 52%, transparent 100%)'
+      <div style={{ position: 'relative' }}>
+        {/* gradient rail linking the three stages into one pipeline */}
+        <div style={{
+          position: 'absolute', top: 13, left: '16.667%', right: '16.667%', height: 3,
+          background: 'linear-gradient(90deg, #0072BF 0%, #3EB1FF 50%, #085698 100%)',
+          borderRadius: 3, zIndex: 0
         }} />
-      </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32 }}>
-        {steps.map((s, i) =>
-        <div key={i} style={{
-          padding: '32px 28px', background: A.chip,
-          border: `1px solid ${A.line}`, borderRadius: 4,
-          display: 'flex', flexDirection: 'column', gap: 18, minHeight: 340
-        }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <div style={{ fontFamily: A.serif, fontStyle: 'italic', fontSize: 72, lineHeight: 0.9, color: A.fg, fontWeight: 400 }}>{s.n}</div>
-              <div style={{ fontFamily: A.mono, fontSize: 11, color: A.sub, textTransform: 'uppercase', letterSpacing: 0.5 }}>{s.w}</div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32, position: 'relative', zIndex: 1 }}>
+          {steps.map((s, i) =>
+          <div key={i} style={{ display: 'flex', flexDirection: 'column' }}>
+            {/* stage node sitting on the rail, above its card */}
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
+              <div style={{
+                width: 28, height: 28, borderRadius: '50%', background: '#3EB1FF',
+                border: '5px solid var(--a-bg)', boxShadow: '0 0 0 1.5px rgba(8,86,152,0.30)'
+              }} />
             </div>
-            <h3 style={{ margin: 0, fontFamily: A.sans, fontSize: 28, letterSpacing: -0.8, color: A.fg, fontWeight: 500 }}>{s.t}</h3>
-            <p style={{ margin: 0, fontFamily: A.sans, fontSize: 14.5, lineHeight: 1.6, color: A.sub, flex: 1 }}>{s.d}</p>
-            <div style={{ borderTop: `1px solid ${A.line}`, paddingTop: 14, display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {s.bullets.map((b, j) =>
-            <div key={j} style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: A.mono, fontSize: 11.5, color: A.fg }}>
-                  <Icon name="check" size={12} color="currentColor" />
+
+            <div style={{
+              padding: '32px 28px', background: A.chip,
+              border: `1px solid ${A.line}`, borderRadius: 10,
+              display: 'flex', flexDirection: 'column', gap: 18, minHeight: 340, flex: 1
+            }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+                <div style={{ fontFamily: A.serif, fontStyle: 'italic', fontSize: 64, lineHeight: 0.9, color: A.ok, fontWeight: 400 }}>{s.n}</div>
+                <div style={{ fontFamily: A.mono, fontSize: 11, color: A.sub, textTransform: 'uppercase', letterSpacing: 0.5 }}>{s.w}</div>
+              </div>
+              <h3 style={{ margin: 0, fontFamily: A.sans, fontSize: 28, letterSpacing: -0.8, color: A.fg, fontWeight: 500 }}>{s.t}</h3>
+              <p style={{ margin: 0, fontFamily: A.sans, fontSize: 14.5, lineHeight: 1.6, color: A.sub, flex: 1 }}>{s.d}</p>
+              <div style={{ borderTop: `1px solid ${A.line}`, paddingTop: 14, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                {s.bullets.map((b, j) =>
+                <div key={j} style={{ display: 'flex', alignItems: 'center', gap: 8, fontFamily: A.mono, fontSize: 11.5, color: A.fg }}>
+                  <Icon name="check" size={12} color={A.ok} />
                   <span>{b}</span>
                 </div>
-            )}
+                )}
+              </div>
             </div>
           </div>
-        )}
+          )}
+        </div>
       </div>
     </div>);
 
