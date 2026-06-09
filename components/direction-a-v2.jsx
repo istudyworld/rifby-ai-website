@@ -85,10 +85,10 @@ const ANav = () =>
 const AHero = () =>
 <div style={{ padding: '56px 56px 72px', position: 'relative' }}>
     <h1 style={{
-    margin: 0, fontFamily: A.sans, lineHeight: 0.92,
-    letterSpacing: -4.5, fontWeight: 500, color: A.fg, maxWidth: 1200, fontSize: "128px"
+    margin: 0, fontFamily: A.sans, lineHeight: 0.95,
+    letterSpacing: -4, fontWeight: 500, color: A.fg, maxWidth: 1320, fontSize: "104px"
   }}>
-      AI automation,<br />
+      Custom AI &amp; software,<br />
       <span style={{ fontFamily: A.serif, fontStyle: 'italic', fontWeight: 400 }}>built</span> for your<br />
       business.
     </h1>
@@ -102,7 +102,7 @@ const AHero = () =>
         margin: 0, fontFamily: A.sans, fontSize: 20, lineHeight: 1.45,
         color: A.sub, maxWidth: 520
       }}>
-          We design, build, and operate custom AI agents.
+          AI agents, automations, and bespoke software — designed, built, and run for you.
         </p>
         <div style={{ display: 'flex', gap: 14, marginTop: 32 }}>
           <a href="https://calendly.com/joseph-rifby/30min" target="_blank" rel="noopener noreferrer" style={{
