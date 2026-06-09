@@ -72,7 +72,7 @@ const CSNav = ({ active = 'Case Studies' }) => (
       ))}
     </div>
     <a href="/contact" style={{
-      display: 'flex', alignItems: 'center', gap: 8, padding: '9px 16px',
+      display: 'flex', alignItems: 'center', gap: 8, padding: '12px 18px',
       border: `1px solid ${CS.line}`, borderRadius: 999, color: CS.fg,
       fontFamily: CS.sans, fontSize: 13, fontWeight: 500, cursor: 'pointer',
       background: CS.chip, textDecoration: 'none',

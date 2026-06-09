@@ -263,10 +263,10 @@ const ContactA = () => (
       <a href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{
         flexShrink: 0,
         display: 'inline-flex', alignItems: 'center', gap: 10,
-        padding: '14px 22px', borderRadius: 999,
-        border: `1px solid ${CS.line}`, background: CS.chip,
-        fontFamily: CS.sans, fontSize: 14, fontWeight: 500,
-        color: CS.fg, textDecoration: 'none',
+        padding: '15px 24px', borderRadius: 999,
+        border: 'none', background: CS.invBg,
+        fontFamily: CS.sans, fontSize: 14, fontWeight: 600,
+        color: CS.invFg, textDecoration: 'none',
       }}>
         Book a 30-minute call <Icon name="arrow-right" size={14} color="currentColor" />
       </a>
@@ -338,8 +338,17 @@ const BookingCard = () => {
       <div
         className="calendly-inline-widget"
         data-url={`${CALENDLY}?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=0a1428&primary_color=085698`}
-        style={{ minWidth: 320, height: 700, borderTop: `1px solid ${CS.line}` }}
+        style={{ minWidth: 280, height: 700, borderTop: `1px solid ${CS.line}` }}
       />
+      {/* Always-available fallback (e.g. if the embed is blocked or fails to load on mobile) */}
+      <a href={CALENDLY} target="_blank" rel="noopener noreferrer" style={{
+        display: 'block', textAlign: 'center', padding: '15px 16px',
+        borderTop: `1px solid ${CS.line}`, background: CS.bg,
+        fontFamily: CS.sans, fontSize: 13, fontWeight: 500,
+        color: CS.ok, textDecoration: 'none',
+      }}>
+        Calendar not loading? Open booking in a new tab →
+      </a>
     </div>
   );
 };
