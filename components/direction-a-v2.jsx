@@ -153,14 +153,12 @@ const AHero = () =>
       </div>
     </div>
 
-    <div style={{ marginTop: 56 }}>
+    <div style={{
+    marginTop: 56, borderRadius: 16, overflow: 'hidden',
+    boxShadow: '0 30px 80px -48px rgba(8,86,152,0.40)'
+  }}>
       <video autoPlay muted loop playsInline poster="assets/hero-poster.jpg"
-      style={{
-        width: '100%', height: 'auto', display: 'block',
-        aspectRatio: '16 / 9', objectFit: 'cover',
-        WebkitMaskImage: 'radial-gradient(125% 118% at 50% 42%, #000 60%, transparent 100%)',
-        maskImage: 'radial-gradient(125% 118% at 50% 42%, #000 60%, transparent 100%)'
-      }}>
+      style={{ width: '100%', height: 'auto', display: 'block', aspectRatio: '16 / 9', objectFit: 'cover' }}>
         <source src="assets/hero-loop-v2.mp4" type="video/mp4" />
       </video>
     </div>
