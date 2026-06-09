@@ -133,13 +133,13 @@ const ServicesA = () => {
                 </h2>
                 <p style={{
                   margin: '32px 0 0', fontFamily: CS.sans, fontSize: 24,
-                  lineHeight: 1.45, color: CS.fg, letterSpacing: -0.4, maxWidth: 820,
+                  lineHeight: 1.45, color: CS.fg, letterSpacing: -0.4, maxWidth: 720,
                 }}>
                   {s.lead}
                 </p>
                 <p style={{
                   margin: '20px 0 0', fontFamily: CS.sans, fontSize: 17,
-                  lineHeight: 1.65, color: CS.sub, maxWidth: 820,
+                  lineHeight: 1.65, color: CS.sub, maxWidth: 680,
                 }}>
                   {s.description}
                 </p>
@@ -285,10 +285,10 @@ const ServicesA = () => {
         <a href="https://calendly.com/joseph-rifby/30min" target="_blank" rel="noopener noreferrer" style={{
           flexShrink: 0,
           display: 'inline-flex', alignItems: 'center', gap: 10,
-          padding: '14px 22px', borderRadius: 999,
-          border: `1px solid ${CS.line}`, background: CS.chip,
-          fontFamily: CS.sans, fontSize: 14, fontWeight: 500,
-          color: CS.fg, textDecoration: 'none',
+          padding: '15px 24px', borderRadius: 999,
+          border: 'none', background: CS.invBg,
+          fontFamily: CS.sans, fontSize: 14, fontWeight: 600,
+          color: CS.invFg, textDecoration: 'none',
         }}>
           Book a 30-minute call <Icon name="arrow-right" size={14} color="currentColor" />
         </a>

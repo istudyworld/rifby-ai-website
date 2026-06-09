@@ -380,10 +380,10 @@ const AboutA = () => {
         <a href="https://calendly.com/joseph-rifby/30min" target="_blank" rel="noopener noreferrer" style={{
           flexShrink: 0,
           display: 'inline-flex', alignItems: 'center', gap: 10,
-          padding: '14px 22px', borderRadius: 999,
-          border: `1px solid ${CS.line}`, background: CS.chip,
-          fontFamily: CS.sans, fontSize: 14, fontWeight: 500,
-          color: CS.fg, textDecoration: 'none',
+          padding: '15px 24px', borderRadius: 999,
+          border: 'none', background: CS.invBg,
+          fontFamily: CS.sans, fontSize: 14, fontWeight: 600,
+          color: CS.invFg, textDecoration: 'none',
         }}>
           Book a 30-minute call <Icon name="arrow-right" size={14} color="currentColor" />
         </a>

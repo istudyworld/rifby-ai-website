@@ -71,7 +71,7 @@ const ANav = () =>
     )}
     </div>
     <a href="/contact" style={{
-    display: 'flex', alignItems: 'center', gap: 8, padding: '9px 16px',
+    display: 'flex', alignItems: 'center', gap: 8, padding: '12px 18px',
     border: `1px solid ${A.line}`, borderRadius: 999, color: A.fg,
     fontFamily: A.sans, fontSize: 13, fontWeight: 500, cursor: 'pointer',
     background: A.chip, textDecoration: 'none'
@@ -379,10 +379,10 @@ const ACta = () =>
     <a href="https://calendly.com/joseph-rifby/30min" target="_blank" rel="noopener noreferrer" style={{
     flexShrink: 0,
     display: 'inline-flex', alignItems: 'center', gap: 10,
-    padding: '14px 22px', borderRadius: 999,
-    border: `1px solid ${A.line}`, background: A.chip,
-    fontFamily: A.sans, fontSize: 14, fontWeight: 500,
-    color: A.fg, textDecoration: 'none'
+    padding: '15px 24px', borderRadius: 999,
+    border: 'none', background: A.invBg,
+    fontFamily: A.sans, fontSize: 14, fontWeight: 600,
+    color: A.invFg, textDecoration: 'none'
   }}>
       Book a 30-minute call <Icon name="arrow-right" size={14} color="currentColor" />
     </a>

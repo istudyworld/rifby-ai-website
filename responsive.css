@@ -5,6 +5,26 @@
    via attribute selectors and override them with !important.
    ============================================================ */
 
+/* ── Global interaction polish (all breakpoints) ───────────── */
+
+/* Consistent brand focus ring instead of the OS default outline */
+*:focus-visible {
+  outline: 2px solid #3EB1FF;
+  outline-offset: 2px;
+}
+
+/* Pill buttons (border-radius:999px) get a transition + hover lift */
+#root a[style*="border-radius: 999px"],
+#root button[style*="border-radius: 999px"] {
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    background-color 0.16s ease, color 0.16s ease, opacity 0.16s ease;
+}
+#root a[style*="border-radius: 999px"]:hover,
+#root button[style*="border-radius: 999px"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 14px 34px rgba(8, 86, 152, 0.30) !important;
+}
+
 @media (max-width: 768px) {
   html, body { overflow-x: hidden; }
 
