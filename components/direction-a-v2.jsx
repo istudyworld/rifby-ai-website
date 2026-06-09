@@ -85,8 +85,8 @@ const ANav = () =>
 const AHero = () =>
 <div style={{ padding: '56px 56px 72px', position: 'relative' }}>
     <h1 style={{
-    margin: 0, fontFamily: A.sans, lineHeight: 0.95,
-    letterSpacing: -4, fontWeight: 500, color: A.fg, maxWidth: 1320, fontSize: "104px"
+    margin: 0, fontFamily: A.sans, lineHeight: 0.98,
+    letterSpacing: -3, fontWeight: 500, color: A.fg, maxWidth: 1040, fontSize: "84px"
   }}>
       Custom AI &amp; software,<br />
       <span style={{ fontFamily: A.serif, fontStyle: 'italic', fontWeight: 400 }}>built</span> for your<br />
