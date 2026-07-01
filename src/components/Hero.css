@@ -153,3 +153,62 @@
   color: var(--ink-2);
   white-space: nowrap;
 }
+
+/* ---- Mobile hero (<=1024px): stack copy over image ---- */
+@media (max-width: 1024px) {
+  .hero-inner {
+    padding-top: 24px;
+    padding-bottom: 8px;
+    display: block;
+  }
+  .hero-left {
+    width: 100%;
+    min-height: 0;
+    display: block;
+  }
+  .hero-h1 {
+    font-size: clamp(33px, 8.6vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -0.5px;
+    gap: 4px;
+  }
+  .hero-line { white-space: normal; }
+  .hero-line-inline { gap: 0; }
+  .hero-inline-avatars { display: none; }
+
+  .hero-sub {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 27px;
+    max-width: 520px;
+  }
+
+  .hero-actions {
+    margin-top: 26px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-actions .btn { width: 100%; }
+
+  .hero-proof { margin-top: 34px; }
+
+  /* image drops below the copy in normal flow */
+  .hero-right {
+    position: static;
+    width: 100%;
+    margin-top: 34px;
+  }
+  .hero-main { width: 100%; }
+
+  /* watch pill anchored to the bottom-left of the image, scaled down */
+  .watch-pill {
+    left: 14px;
+    top: auto;
+    bottom: 14px;
+    gap: 12px;
+    padding: 3px 22px 3px 3px;
+  }
+  .watch-thumb { width: 66px; height: 66px; border-radius: 16px; }
+  .watch-play { width: 34px; height: 34px; }
+  .watch-label { font-size: 15px; }
+}

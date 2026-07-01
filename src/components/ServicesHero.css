@@ -52,3 +52,12 @@
   .shero-text { padding: 48px var(--gutter); }
   .shero-h1 { font-size: 56px; line-height: 62px; }
 }
+
+/* ---- phone tuning ---- */
+@media (max-width: 600px) {
+  .shero-photo { height: 340px; }
+  .shero-text { padding: 40px 20px; }
+  .shero-h1 { font-size: clamp(34px, 10vw, 56px); line-height: 1.08; max-width: 100%; }
+  .shero-desc { font-size: 17px; line-height: 26px; margin-top: 20px; }
+  .shero-cta { width: 100%; margin-top: 32px; }
+}

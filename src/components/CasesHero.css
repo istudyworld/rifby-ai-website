@@ -95,3 +95,15 @@
   .chero-photo { width: 100%; height: 420px; }
   .chero-filters { position: static; transform: none; margin: 32px auto 0; flex-wrap: wrap; justify-content: center; }
 }
+
+/* ---- phone tuning ---- */
+@media (max-width: 600px) {
+  .chero { padding-bottom: 48px; }
+  .chero-grid { padding-top: 88px; gap: 32px; }
+  .chero-h1 { font-size: clamp(32px, 9vw, 56px); line-height: 1.08; }
+  .chero-desc { font-size: 17px; line-height: 26px; }
+  .chero-cta { width: 100%; margin-top: 28px; justify-content: center; }
+  .chero-photo { height: 320px; }
+  .chero-filters { border-radius: 20px; padding: 12px; gap: 8px; margin-top: 28px; }
+  .chero-chip { font-size: 15px; padding: 9px 16px; }
+}

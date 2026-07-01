@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Nav.css';
 
 const logoMark = '/figma/logo-mark.svg';
@@ -21,13 +21,26 @@ const LINKS = [
 ];
 
 export default function Nav() {
+  const [open, setOpen] = useState(false);
   return (
-    <header className="nav">
+    <header className={`nav${open ? ' nav-open' : ''}`}>
       <div className="container nav-inner">
         <a className="nav-logo" href="/">
           <img src={logoMark} alt="" className="nav-logo-mark" width="30" height="28" />
           <span className="nav-logo-text">RIFBY AI</span>
         </a>
+
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="nav-toggle-bar" />
+          <span className="nav-toggle-bar" />
+          <span className="nav-toggle-bar" />
+        </button>
 
         <nav className="nav-pill">
           {LINKS.map((l) => (

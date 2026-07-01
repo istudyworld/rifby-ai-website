@@ -23,3 +23,23 @@
 .ap-item-title { font-size: 24px; line-height: 31px; font-weight: 500; color: #18181a; }
 .ap-item-desc { font-size: 14px; line-height: 22px; color: #23232c; }
 .ap-item-arrow { margin-top: 6px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .ap { padding: 56px 0; }
+  .ap-label { margin-bottom: 16px; }
+  .ap-row { flex-direction: column; gap: 40px; }
+  .ap-left { width: 100%; gap: 32px; }
+  .ap-head { gap: 18px; }
+  .ap-title { font-size: clamp(32px, 8.4vw, 68px); line-height: 1.1; }
+  .ap-desc { max-width: 100%; font-size: 16px; line-height: 25px; }
+  .ap-cta { align-self: stretch; justify-content: center; padding: 14px 20px; }
+
+  .ap-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 30px;
+  }
+  .ap-item-desc { font-size: 15px; line-height: 23px; }
+}

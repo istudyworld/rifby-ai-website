@@ -56,3 +56,12 @@
   .cfeat-grid { flex-direction: column; gap: 48px; }
   .cfeat-divider { display: none; }
 }
+
+@media (max-width: 600px) {
+  .cfeat { padding: 52px 0 56px; }
+  .cfeat-grid { gap: 40px; }
+  .cfeat-icon { width: 64px; height: 64px; margin-bottom: 22px; }
+  .cfeat-title { font-size: 24px; line-height: 32px; }
+  .cfeat-body { font-size: 16px; line-height: 25px; }
+  .cfeat-link { font-size: 16px; margin-top: 20px; }
+}

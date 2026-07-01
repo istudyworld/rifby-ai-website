@@ -126,3 +126,36 @@
 }
 
 .testi-cta { padding: 12px 24px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .testi-quote {
+    flex-direction: column;
+    gap: 24px;
+    padding: 44px 20px;
+  }
+  .testi-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 242 / 148;
+  }
+  .testi-body { max-width: 100%; padding-left: 16px; gap: 26px; }
+  .testi-text { font-size: 19px; line-height: 29px; }
+  .testi-avatar { width: 56px; height: 56px; }
+  .testi-author-meta { gap: 6px; }
+  .testi-name { font-size: 20px; line-height: 24px; }
+  .testi-role { font-size: 15px; line-height: 22px; }
+
+  .testi-cases { padding-top: 40px; }
+  .testi-cases-inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px 28px;
+    gap: 28px;
+  }
+  .testi-cases-row { flex-direction: column; gap: 24px; }
+  .testi-divider { display: none; }
+  .testi-case { width: 100%; min-height: 0; gap: 14px; justify-content: flex-start; }
+  .testi-case-arrow { margin-top: 2px; }
+  .testi-cta { width: 100%; padding: 15px 24px; }
+}

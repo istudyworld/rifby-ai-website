@@ -104,3 +104,36 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .process { padding: 56px 0; }
+  .process-inner { flex-direction: column; align-items: stretch; gap: 32px; }
+
+  .process-left { width: 100%; }
+  .process-star { display: none; }
+  .process-label { font-size: 16px; margin-bottom: 12px; }
+  .process-title {
+    width: 100%;
+    font-size: clamp(30px, 8vw, 68px);
+    line-height: 1.12;
+  }
+
+  .process-right { width: 100%; gap: 12px; }
+
+  /* Discover — stack image over body */
+  .step-discover { flex-direction: column; height: auto; }
+  .step-discover-img { width: 100%; height: 190px; }
+  .step-discover-img::after { display: none; }
+  .step-discover-body { padding: 22px 20px; gap: 24px; }
+
+  /* Design + Automate — single column */
+  .step-row { flex-direction: column; gap: 12px; }
+  .step-card { width: 100%; height: auto; }
+  .step-card-img { height: 190px; }
+  .step-card-body { padding: 24px 18px 18px; gap: 24px; }
+
+  .step-title { font-size: 24px; line-height: 28px; }
+  .step-desc-blue { font-size: 16px; line-height: 25px; }
+  .step-foot { gap: 16px; }
+}

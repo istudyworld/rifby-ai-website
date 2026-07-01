@@ -209,9 +209,27 @@
 /* ---- responsive fallback ---- */
 @media (max-width: 1100px) {
   .svc { padding: 64px 0; }
-  .svc-inner, .svc--reversed .svc-inner { flex-direction: column; gap: 48px; }
+  .svc-inner, .svc--reversed .svc-inner { flex-direction: column; gap: 40px; }
   .svc-text-col, .svc--blue .svc-text-col { flex-basis: auto; }
   .svc-media-col, .svc--reversed .svc-media-col { flex-basis: auto; align-items: stretch; }
   .svc-media-main { width: 100%; }
   .svc-heading { font-size: 34px; line-height: 44px; }
+
+  /* Promote both columns into one flow so the intro + image read BEFORE the
+     detail lists on mobile (media column is DOM-second on desktop). */
+  .svc-text-col, .svc-media-col { display: contents; }
+  .svc-heading      { order: 1; }
+  .svc-media-main   { order: 2; }   /* lead, body, image, tags */
+  .svc-text-groups  { order: 3; }   /* what you get, who it's for */
+  .svc-process      { order: 4; }
+}
+
+/* ---- phone tuning ---- */
+@media (max-width: 600px) {
+  .svc { padding: 52px 0; }
+  .svc-heading { font-size: 30px; line-height: 38px; }
+  .svc-text-groups { gap: 36px; }
+  .svc-media-top { gap: 32px; }
+  .svc-lead { font-size: 19px; line-height: 28px; }
+  .svc-tag { padding: 9px 16px; }
 }

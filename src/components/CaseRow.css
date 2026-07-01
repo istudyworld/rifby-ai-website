@@ -236,3 +236,46 @@
   .case-heading { font-size: 46px; line-height: 52px; }
   .case-cluster { align-self: center; }
 }
+
+/* ---- Mobile: unstack the overlapping cluster (566px fixed → full width) ---- */
+@media (max-width: 700px) {
+  .case-cluster {
+    position: static;
+    align-self: stretch;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .case-photo {
+    position: static;
+    order: 1;
+    width: 100%;
+    height: 240px;
+    border-radius: 16px;
+  }
+  .case-card {
+    position: static;
+    order: 2;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 48px;
+    padding: 24px 28px;
+    border-radius: 16px;
+  }
+  .case-h-strip { display: none; }   /* absolute inline strip overflows narrow headings */
+  .case-arrows { position: static; transform: none; justify-content: center; margin-top: 28px; }
+}
+
+/* ---- phone type ---- */
+@media (max-width: 600px) {
+  .case-heading { font-size: 38px; line-height: 44px; }
+  .case-h1-accent { font-size: 32px; line-height: 37px; }
+  .case-list-text { font-size: 16px; line-height: 25px; }
+  .case-stat-big { font-size: 38px; line-height: 42px; }
+  .case-stat-small { font-size: 15px; line-height: 21px; }
+}

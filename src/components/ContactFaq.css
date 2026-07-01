@@ -73,8 +73,17 @@
 .cfaq-line { display: block; height: 1px; background: #7979ee; }
 
 @media (max-width: 1100px) {
+  .cfaq-star { display: none; }   /* decorative blob overlaps the questions */
   .cfaq-inner { flex-direction: column; gap: 40px; }
   .cfaq-intro { width: 100%; min-height: 0; gap: 16px; }
   .cfaq-title { font-size: 56px; line-height: 62px; }
   .cfaq-q { font-size: 22px; line-height: 26px; }
+}
+
+@media (max-width: 600px) {
+  .cfaq { padding: 52px 0; }
+  .cfaq-title { font-size: clamp(38px, 10vw, 80px); line-height: 1.08; }
+  .cfaq-sub { max-width: 100%; font-size: 17px; line-height: 26px; }
+  .cfaq-q { font-size: 18px; line-height: 24px; padding: 18px 0; }
+  .cfaq-a { font-size: 16px; line-height: 25px; }
 }

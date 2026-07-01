@@ -59,3 +59,37 @@
 .ahero-info-label { font-size: 16px; line-height: 20px; color: var(--grey-3); }
 .ahero-info-value { font-size: 20px; line-height: 26px; color: var(--ink); }
 .ahero-info-line { height: 1px; background: #dddfe2; margin-top: 12px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .ahero-inner {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+  .ahero-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 593 / 620;
+  }
+  .ahero-right { min-height: 0; }
+  .ahero-h1 { font-size: clamp(34px, 9vw, 80px); line-height: 1.1; }
+  .ahero-line { gap: 0.28em; }
+  /* Hide the inline chips but keep them as zero-size flex items so the gap
+     still separates the words (display:none would merge "Smarter"+"AI"). */
+  .ahero-chip { width: 0; height: 0; visibility: hidden; margin: 0; }
+
+  .ahero-cta { margin-top: 26px; width: 100%; }
+
+  .ahero-bottom {
+    position: static;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+    margin-top: 32px;
+  }
+  .ahero-desc { width: 100%; font-size: 17px; line-height: 26px; }
+  .ahero-info-list { width: 100%; gap: 22px; }
+  .ahero-info-value { font-size: 18px; }
+}

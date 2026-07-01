@@ -29,3 +29,18 @@
   background: #343437;
   margin: 0 50px;
 }
+
+/* ---- Mobile (<=1024px): 2x2 grid ---- */
+@media (max-width: 1024px) {
+  .astats-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px 24px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+  .astats-divider { display: none; }
+  .astats-item { gap: 10px; }
+  .astats-num { font-size: clamp(38px, 13vw, 70px); line-height: 1.05; }
+  .astats-label { font-size: 15px; line-height: 21px; }
+}
