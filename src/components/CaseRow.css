@@ -1,0 +1,238 @@
+/* ============================================================
+   CaseRow — one case study (Case Studies page)
+   Tones: dark, blue, light. Optional reversed (cluster on left).
+   ============================================================ */
+
+.case {
+  position: relative;
+  background: var(--case-bg);
+  padding: 100px 0;
+}
+.case-container { position: relative; }
+
+.case-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 89px;
+}
+.case--reversed .case-inner { flex-direction: row-reverse; }
+
+/* ---- text side ---- */
+.case-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+.case-head { display: flex; flex-direction: column; gap: 20px; }
+
+.case-company {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--case-company);
+}
+.case-text.is-smalllabel .case-company { font-size: 14px; line-height: 15px; }
+
+.case-heading {
+  position: relative;
+  max-width: 758px;
+  font-size: 68px;
+  line-height: 75px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: var(--case-heading);
+}
+
+/* boxed highlight word inside a heading (e.g. "Invoice") */
+.case-hl-box {
+  background: #0060ff;
+  color: #fff;
+  padding: 0 6px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* row 1 two-tone stacked heading */
+.case-h1-stack { display: flex; flex-direction: column; gap: 12px; }
+.case-h1-accent {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+/* row 2 inline image strip */
+.case-h-strip {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 276px;
+  height: 48px;
+  border-radius: 36px;
+  object-fit: cover;
+}
+
+/* ---- numbered list (row 1) ---- */
+.case-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 412px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.case-list-item { display: flex; gap: 12px; align-items: flex-start; }
+.case-list-num {
+  flex: 0 0 35px;
+  width: 35px;
+  height: 35px;
+  border-radius: 28px;
+  background: #18181b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 18px;
+}
+.case-list-text {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  color: var(--case-list);
+}
+
+/* ---- tags ---- */
+.case-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+.case-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 24px;
+  border-radius: 28px;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 400;
+}
+.case-tag--primary { background: var(--blue); color: #fff; }
+.case-tag--ghost {
+  background: var(--case-ghost-bg);
+  border: var(--case-ghost-border);
+  color: var(--case-ghost-text);
+}
+
+/* ---- cluster: stat card overlapping a photo ---- */
+.case-cluster {
+  position: relative;
+  flex: 0 0 566px;
+  width: 566px;
+  height: 582px;
+}
+.case-photo {
+  position: absolute;
+  top: 269px;
+  left: 241px;
+  width: 325px;
+  height: 313px;
+  object-fit: cover;
+}
+.case-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 287px;
+  height: 368px;
+  background: var(--blue);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.case-stat { display: flex; flex-direction: column; gap: 20px; }
+.case-stat-big {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #fff;
+}
+.case-stat-small {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.case-stat-small.is-light { font-weight: 400; }
+
+/* empty filter state */
+.case-empty {
+  padding: 120px 60px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--grey-1);
+  background: var(--bg);
+}
+
+/* ---- prev / next arrows ---- */
+.case-arrows {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+.case-arrow {
+  width: 56px;
+  height: 44px;
+  border: none;
+  border-radius: 39px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.case-arrow--back { background: #fff; }
+.case-arrow--next { background: rgba(255, 255, 255, 0.4); }
+
+/* ============================================================
+   Tones
+   ============================================================ */
+.case--dark {
+  --case-bg: #0e0e0f;
+  --case-heading: #ffffff;
+  --case-company: #9898a2;
+  --case-list: #a5a5ae;
+  --case-ghost-bg: #414143;
+  --case-ghost-border: none;
+  --case-ghost-text: #b7b7be;
+}
+.case--blue {
+  --case-bg: #a5c6fd;
+  --case-heading: #0e0e0f;
+  --case-company: #3e3e47;
+  --case-list: #3b3c3f;
+  --case-ghost-bg: transparent;
+  --case-ghost-border: 1px solid rgba(0, 0, 0, 0.6);
+  --case-ghost-text: #1a1a4d;
+}
+.case--light {
+  --case-bg: #f5f7fa;
+  --case-heading: #0e0e0f;
+  --case-company: #6b6b7c;
+  --case-list: #515356;
+  --case-ghost-bg: #e5e5eb;
+  --case-ghost-border: none;
+  --case-ghost-text: #5d5d63;
+}
+
+/* ---- responsive fallback ---- */
+@media (max-width: 1100px) {
+  .case { padding: 64px 0 88px; }
+  .case-inner, .case--reversed .case-inner { flex-direction: column; align-items: flex-start; gap: 48px; }
+  .case-heading { font-size: 46px; line-height: 52px; }
+  .case-cluster { align-self: center; }
+}

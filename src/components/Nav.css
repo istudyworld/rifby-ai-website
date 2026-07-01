@@ -1,0 +1,50 @@
+.nav {
+  position: relative;
+  z-index: 20;
+  padding-top: 32px;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Logo */
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.nav-logo-mark { display: block; }
+.nav-logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--blue);
+  line-height: 1;
+}
+
+/* Center pill */
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 48px;
+  padding: 14px 24px;
+  background: var(--pill-grey);
+  border: 1px solid var(--pill-border);
+  border-radius: 43px;
+}
+.nav-link {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink);
+  transition: color .15s ease;
+}
+.nav-link:hover { color: var(--blue); }
+
+/* CTA */
+.nav-cta {
+  border-radius: 50px;
+}
+.nav-cta span { font-size: 18px; }

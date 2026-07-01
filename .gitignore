@@ -5,3 +5,7 @@ Thumbs.db
 *.log
 node_modules/
 .vercel
+dist/
+screenshots/
+.env
+.env.*

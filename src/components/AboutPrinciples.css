@@ -1,0 +1,25 @@
+.ap { background: #a5c6fd; padding: 120px 0; }
+.ap-label { display: block; font-size: 14px; line-height: 22px; color: #25252d; margin-bottom: 24px; }
+.ap-row { display: flex; justify-content: space-between; gap: 92px; }
+
+/* left */
+.ap-left { width: 483px; flex-shrink: 0; display: flex; flex-direction: column; gap: 92px; }
+.ap-head { display: flex; flex-direction: column; gap: 24px; }
+.ap-title { font-size: 68px; line-height: 75px; font-weight: 500; letter-spacing: -1px; color: #18181a; }
+.ap-desc { max-width: 437px; font-size: 20px; line-height: 30px; color: #23232c; }
+.ap-cta { align-self: flex-start; padding: 10px 20px; font-size: 20px; font-weight: 500; }
+
+/* values grid */
+.ap-grid {
+  width: 827px;
+  display: grid;
+  grid-template-columns: 336px 427px;
+  column-gap: 64px;
+  row-gap: 60px;
+}
+.ap-item { display: flex; flex-direction: column; gap: 18px; }
+.ap-item-icon { width: 64px; height: 64px; }
+.ap-item-body { display: flex; flex-direction: column; gap: 12px; }
+.ap-item-title { font-size: 24px; line-height: 31px; font-weight: 500; color: #18181a; }
+.ap-item-desc { font-size: 14px; line-height: 22px; color: #23232c; }
+.ap-item-arrow { margin-top: 6px; }

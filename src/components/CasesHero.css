@@ -1,0 +1,97 @@
+.chero-section { background: var(--bg); }
+.chero {
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+  padding-bottom: 96px;
+}
+
+.chero-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 141px;
+}
+
+.chero-left { width: 779px; flex-shrink: 0; }
+
+.chero-h1 {
+  font-size: 80px;
+  line-height: 88px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #0f0f10;
+}
+.chero-box {
+  background: #1544ff;
+  color: #fff;
+  padding: 0 8px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.chero-rest { color: #0f0f10; }
+
+.chero-desc {
+  margin-top: 24px;
+  max-width: 614px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4b4d50;
+}
+
+.chero-cta {
+  margin-top: 48px;
+  padding: 14px 28px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.chero-photo {
+  width: 601px;
+  height: 646px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.chero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---- filter chips bar ---- */
+.chero-filters {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 1322px;
+  padding: 12px 24px;
+  background: rgba(158, 165, 175, 0.3);
+  border-radius: 42px;
+}
+.chero-chip {
+  border: none;
+  border-radius: 29px;
+  padding: 10px 24px;
+  background: #fff;
+  color: #101111;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.chero-chip:hover { background: #e8eaed; }
+.chero-chip.is-active {
+  background: #0f0f10;
+  color: #fff;
+}
+.chero-chip.is-active:hover { background: #0f0f10; }
+
+@media (max-width: 1100px) {
+  .chero-grid { flex-direction: column; gap: 40px; padding-top: 110px; }
+  .chero-left { width: 100%; }
+  .chero-h1 { font-size: 56px; line-height: 62px; }
+  .chero-photo { width: 100%; height: 420px; }
+  .chero-filters { position: static; transform: none; margin: 32px auto 0; flex-wrap: wrap; justify-content: center; }
+}

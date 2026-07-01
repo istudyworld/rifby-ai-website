@@ -1,71 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Rifby — Contact</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Book a 30-minute strategy call with Rifby. Tell us what's costing you time — we'll tell you whether AI is the right lever.">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="responsive.css">
-<style>
-  html, body { margin: 0; padding: 0; font-family: "DM Sans", system-ui, sans-serif; }
-  * { box-sizing: border-box; }
-
-  :root {
-    --a-bg:       #0a1428;
-    --a-bg2:      #071023;
-    --a-fg:       #eaf2ff;
-    --a-sub:      rgba(234,242,255,0.62);
-    --a-line:     rgba(234,242,255,0.14);
-    --a-chip:     rgba(234,242,255,0.06);
-    --a-invert-bg: #eaf2ff;
-    --a-invert-fg: #0a1428;
-    --a-ok:       #3EB1FF;
-  }
-  body.light {
-    --a-bg:       #ffffff;
-    --a-bg2:      #eef3f9;
-    --a-fg:       #0a1428;
-    --a-sub:      rgba(10,20,40,0.60);
-    --a-line:     rgba(8,86,152,0.14);
-    --a-chip:     rgba(8,86,152,0.05);
-    --a-invert-bg: #085698;
-    --a-invert-fg: #ffffff;
-    --a-ok:       #085698;
-  }
-  body { background: var(--a-bg); color: var(--a-fg); }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Rifby AI | Book a strategy call</title>
+  <meta name="description" content="Book a 30-minute strategy call with Rifby AI. No pitch, no pressure. We find your biggest bottleneck and leave you with a clear next step, with or without us." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 </head>
-<body class="light">
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <filter id="logo-navy" color-interpolation-filters="sRGB">
-      <feColorMatrix type="matrix" values="
-        0 0 0 0 0.0314
-        0 0 0 0 0.3373
-        0 0 0 0 0.5961
-        0 0 0 1 0"/>
-    </filter>
-  </defs>
-</svg>
-
-<div id="root"></div>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
-
-<script type="text/babel" src="components/shared.jsx" data-plugins="transform-react-jsx-source"></script>
-<script type="text/babel" src="components/case-shared.jsx" data-plugins="transform-react-jsx-source"></script>
-<script type="text/babel" src="components/contact-a.jsx" data-plugins="transform-react-jsx-source"></script>
-
-<script type="text/babel" data-plugins="transform-react-jsx-source">
-  ReactDOM.createRoot(document.getElementById('root')).render(<ContactA />);
-</script>
-
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/entries/contact.jsx"></script>
 </body>
 </html>

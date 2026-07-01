@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1512, height: 982 } });
+const msgs = [];
+page.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') msgs.push(`[${m.type()}] ${m.text()}`); });
+page.on('pageerror', e => msgs.push(`[pageerror] ${e.message}`));
+await page.goto(process.argv[2], { waitUntil: 'networkidle' });
+await page.waitForTimeout(800);
+console.log(msgs.length ? msgs.join('\n') : 'NO CONSOLE ERRORS/WARNINGS');
+await browser.close();

@@ -1,0 +1,98 @@
+/* ============================================================
+   Rifby AI — global styles & design tokens (Figma: Rifby Redesign)
+   ============================================================ */
+
+:root {
+  /* Brand / palette */
+  --blue:        #0060ff;   /* primary action blue */
+  --blue-mark:   #0463aa;   /* logo R mark */
+  --blue-accent: #3db1fe;   /* logo sky accent */
+  --ink:         #0e0e0f;   /* primary text (near-black) */
+  --ink-2:       #1e1e1e;
+  --grey-1:      #505055;   /* body copy */
+  --grey-2:      #595a5c;   /* secondary button text */
+  --grey-3:      #4b4d50;   /* labels */
+  --grey-4:      #93969b;   /* hairline / muted */
+  --bg:          #f5f7fa;   /* soft page background */
+  --surface:     #ffffff;
+  --pill-grey:   #e8eaed;   /* nav pill */
+  --pill-border: #d2d4d7;
+  --btn-grey:    #e2e4e7;   /* secondary button */
+  --btn-grey-bd: #c6c8cb;
+  --star:        #d05603;
+
+  /* Layout */
+  --maxw: 1512px;
+  --gutter: 60px;
+  --content: 1392px;
+
+  /* Soft layered button shadow from Figma */
+  --shadow-btn:
+    0 3px 2px rgba(0,0,0,0.02),
+    0 7px 5px rgba(0,0,0,0.03),
+    0 13px 10px rgba(0,0,0,0.035),
+    0 22px 18px rgba(0,0,0,0.043),
+    0 42px 33px rgba(0,0,0,0.05);
+
+  --font: "Space Grotesk", system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+h1, h2, h3, h4, p { margin: 0; }
+
+/* Centered content rail matching Figma's 60px gutters at 1512 */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  border-color: rgba(147,150,155,0.6);
+  box-shadow: var(--shadow-btn);
+}
+.btn-primary:hover { transform: translateY(-1px); background: #0a52d6; }
+.btn-secondary {
+  background: var(--btn-grey);
+  color: var(--grey-2);
+  border-color: var(--btn-grey-bd);
+}
+.btn-secondary:hover { background: #d8dbe0; }
+
+/* size variants (padding from Figma) */
+.btn-md { padding: 14px 28px; font-size: 18px; }
+.btn-lg { padding: 14px 28px; font-size: 20px; }
