@@ -28,6 +28,7 @@ function NextIcon() {
 }
 
 export default function CaseRow({
+  slug,
   tone,
   reversed = false,
   company,
@@ -41,7 +42,7 @@ export default function CaseRow({
 }) {
   const sectionRef = useRef(null);
   return (
-    <section ref={sectionRef} className={`case case--${tone}${reversed ? ' case--reversed' : ''}`}>
+    <section ref={sectionRef} id={slug} className={`case case--${tone}${reversed ? ' case--reversed' : ''}`}>
       <div className="container case-container">
         <div className="case-inner">
           <div className={`case-text${smallCompany ? ' is-smalllabel' : ''}`}>

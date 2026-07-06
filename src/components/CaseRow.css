@@ -7,6 +7,7 @@
   position: relative;
   background: var(--case-bg);
   padding: 100px 0;
+  scroll-margin-top: 24px; /* breathing room when deep-linked via /case-studies#slug */
 }
 .case-container { position: relative; }
 

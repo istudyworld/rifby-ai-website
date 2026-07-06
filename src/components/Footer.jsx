@@ -8,6 +8,7 @@ const COLUMNS = [
     title: 'Company',
     links: [
       { label: 'About', href: '/about' },
+      { label: 'Problems We Solve', href: '/problems' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Services', href: '/services' },
     ],
@@ -25,7 +26,6 @@ const COLUMNS = [
     links: [
       { label: 'Privacy', href: '/privacy' },
       { label: 'Terms', href: '/terms' },
-      { label: 'Another World VR', href: '/case-studies' },
     ],
   },
 ];
