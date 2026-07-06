@@ -21,6 +21,13 @@ export default function Team() {
             <span className="team-name-role">Project Manager</span>
           </span>
         </div>
+        <div className="team-tag" style={{ left: 170, top: 260 }}>
+          <img className="team-av" src={AV('imran-hossen')} alt="Imran Hossen, Digital Product Designer" style={{ width: 120, height: 120 }} />
+          <span className="team-name">
+            Imran Hossen
+            <span className="team-name-role">Digital Product Designer</span>
+          </span>
+        </div>
         <div className="team-tag" style={{ left: 70, top: 470 }}>
           <img className="team-av" src={AV('amara-okafor')} alt="Amara Okafor, AI Engineer" style={{ width: 146, height: 146 }} />
           <span className="team-name">
