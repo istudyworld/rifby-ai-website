@@ -82,7 +82,7 @@ export default function Hero() {
         <div className="hero-video-modal" onClick={() => setVideoOpen(false)}>
           <div className="hero-video-box" onClick={(e) => e.stopPropagation()}>
             <button className="hero-video-close" onClick={() => setVideoOpen(false)} aria-label="Close video">&times;</button>
-            <video src="/assets/hero-loop-v2.mp4" controls autoPlay playsInline className="hero-video-el" />
+            <video src="/assets/rifby-brand-film.mp4" controls autoPlay playsInline className="hero-video-el" />
           </div>
         </div>
       )}
