@@ -1,85 +1,97 @@
 import React from 'react';
 import './ProblemBlocks.css';
 
-function ArrowMini() {
-  return (
-    <svg width="28" height="12" viewBox="0 0 28 12" fill="none" aria-hidden="true">
-      <path d="M0 6h26M21 1l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-// Copy drafted from FEEDBACK-2026-07-06.md — pending Joseph's sign-off.
-// Case-study links use the #slug anchors rendered by CaseRow.
+// Layout modelled on cps.co.uk/problems-we-solve (Joseph's reference,
+// 2026-07-06): dark 2-col card grid, colored right accent bar per card,
+// colored pill CTA. Copy is Rifby's own — no Microsoft references.
 const PROBLEMS = [
   {
-    heading: 'Your team is buried in repetitive admin',
-    body: 'Manual data entry, reconciliation, and copy-paste between systems eat hours every week and invite errors. We build workflow automations that take the mundane off your team’s plate, so the time goes back into work that grows the business.',
-    href: '/case-studies#ahmad-co-accountant',
-    linkLabel: 'See how an accounting practice saved 20 hours a week',
-  },
-  {
-    heading: 'You know AI matters, but not where to start',
-    body: 'Everyone says “use AI”; nobody says where it actually pays back. We audit your processes, find the highest-value opportunities, and prove them with a working pilot before you commit to anything big.',
-    href: '/contact',
-    linkLabel: 'Book an AI audit',
-  },
-  {
-    heading: 'Leads and enquiries slip through the cracks',
-    body: 'Slow responses lose deals, and busy teams can’t answer everything first. We build AI agents that qualify, triage, and route every enquiry in minutes, around the clock.',
-    href: '/case-studies#hartwell-vine',
-    linkLabel: 'Intake time cut from 45 minutes to 12',
-  },
-  {
-    heading: 'Marketing never makes it off the to-do list',
-    body: 'Your social channels go quiet the moment business gets busy, which is exactly when you need them working. We put content drafting and scheduling on autopilot, with you approving in one click.',
-    href: '/case-studies#another-world',
-    linkLabel: '8 hours a week back, 4 platforms synced',
-  },
-  {
-    heading: 'Decisions run on gut feel, not data',
-    body: 'Your numbers live in scattered spreadsheets and disconnected tools, so nobody sees the full picture. We unify your data into live dashboards that give you real-time visibility and confident decisions.',
+    accent: 'orange',
+    heading: 'Turning Digital Transformation into Real Outcomes',
+    body: 'Digital transformation shouldn’t mean expensive tools and buzzwords. Rifby helps you build a clear, actionable roadmap, connecting people, processes, and data through AI and automation. Discover how strategy, not just software, can drive meaningful change.',
+    cta: 'Digital Transformation That Delivers Real Change',
     href: '/services',
-    linkLabel: 'Explore data-driven insights',
   },
   {
-    heading: 'Off-the-shelf software doesn’t fit how you work',
-    body: 'Forcing your processes into generic tools costs more than it saves. We design and ship custom apps and portals shaped around your workflows, your tools, and your edge cases.',
-    href: '/case-studies#simply-carers',
-    linkLabel: 'A booking app that cut no-shows 38%',
-  },
-  {
-    heading: 'Your website isn’t winning you customers',
-    body: 'An outdated site quietly costs you credibility and orders every day. We build fast, branded websites designed to convert visitors into customers.',
-    href: '/case-studies#hunnys-taste',
-    linkLabel: 'From no online presence to taking orders',
-  },
-  {
-    heading: 'Automation that nobody looks after',
-    body: 'Systems drift, break, and lose your team’s trust when no one owns them. Our monthly retainers keep everything monitored, optimised, and growing, and you own every line of what we build.',
+    accent: 'green',
+    heading: 'Adopting AI Strategically Across Your Organisation',
+    body: 'Embrace AI that empowers your people, not replaces them. Rifby guides you in building a practical, business-focused AI strategy grounded in trusted data, robust governance, and real-world impact. See how intelligent automation can transform your operations, safely and at scale.',
+    cta: 'AI That Works for You, Not the Other Way Around',
     href: '/contact',
-    linkLabel: 'Talk to us about a retainer',
+  },
+  {
+    accent: 'yellow',
+    heading: 'Automate the Mundane',
+    body: 'Free your team from repetitive, low-value tasks with intelligent automation. Rifby builds workflow automations and AI agents that streamline processes, reduce manual effort, and let your people focus on what matters most. Explore how automation can drive efficiency and measurable ROI.',
+    cta: 'Reduce Manual Processes, Automate the Mundane',
+    href: '/case-studies#ahmad-co-accountant',
+  },
+  {
+    accent: 'red',
+    heading: 'Get Real-Time Reporting',
+    body: 'Stop chasing data and start making confident decisions. Rifby unifies your business intelligence with live dashboards and real-time reporting, giving you instant visibility across projects, customers, and departments. Learn how connected insights can fuel better outcomes.',
+    cta: 'Get Real-Time Insight with Unified Reporting',
+    href: '/services',
+  },
+  {
+    accent: 'orange',
+    heading: 'Deliver Projects on Time',
+    body: 'Take control of your delivery with unified, real-time management. Rifby brings order to the chaos with automated tracking and AI-driven reporting, ensuring every project is visible, predictable, and aligned to your business goals. Find out how to deliver on time, every time.',
+    cta: 'Deliver Projects on Time, Every Time',
+    href: '/contact',
+  },
+  {
+    accent: 'blue',
+    heading: 'Stay Compliant and Secure in a Changing World',
+    body: 'Protect your data, strengthen governance, and stay ahead of evolving threats. Rifby builds automation with security and compliance baked in, keeping your systems safe, auditable, and productive no matter how the landscape changes. See how you can turn compliance into a business strength.',
+    cta: 'Protect Your People, Data, and Operations',
+    href: '/contact',
+  },
+  {
+    accent: 'sky',
+    heading: 'Stop Losing Leads to Slow Follow-Up',
+    body: 'Every slow reply is a deal quietly walking out the door. Rifby builds AI agents that qualify, triage, and respond to every enquiry in minutes, around the clock, so no lead goes cold while your team is busy. See how faster follow-up turns into won business.',
+    cta: 'Respond to Every Lead in Minutes',
+    href: '/case-studies#hartwell-vine',
+  },
+  {
+    accent: 'green',
+    heading: 'Keep Your Brand Visible on Autopilot',
+    body: 'Your marketing goes quiet exactly when business gets busy, which is when you need it most. Rifby puts content drafting, approval, and scheduling on autopilot across your channels, keeping your brand in front of customers without stealing hours from the week.',
+    cta: 'Stay Visible Without the Overhead',
+    href: '/case-studies#another-world',
   },
 ];
 
 export default function ProblemBlocks() {
   return (
-    <>
-      {PROBLEMS.map((p, i) => (
-        <section className={`prob ${i % 2 === 0 ? 'prob--light' : 'prob--soft'}`} key={p.heading}>
-          <div className="container prob-inner">
-            <span className="prob-num">{String(i + 1).padStart(2, '0')}</span>
-            <div className="prob-main">
-              <h2 className="prob-h">{p.heading}</h2>
-              <p className="prob-desc">{p.body}</p>
-              <a className="prob-link" href={p.href}>
-                <span>{p.linkLabel}</span>
-                <ArrowMini />
-              </a>
-            </div>
+    <section className="pblocks">
+      <div className="container">
+        <div className="pblocks-grid">
+          {PROBLEMS.map((p) => (
+            <article className={`pcard pcard--${p.accent}`} key={p.heading}>
+              <div className="pcard-body">
+                <h2 className="pcard-h">{p.heading}</h2>
+                <p className="pcard-desc">{p.body}</p>
+                <a className="pcard-cta" href={p.href}>{p.cta}</a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <article className="pcard pcard--orange pcard--wide">
+          <div className="pcard-body">
+            <h2 className="pcard-h">One Accountable Partner for Your Entire Journey</h2>
+            <p className="pcard-desc">
+              Experience end-to-end AI and automation expertise with a single, accountable
+              partner. Rifby delivers strategy, implementation, security, and ongoing
+              support across your whole stack, removing complexity and ensuring seamless
+              results. See why growing businesses trust Rifby for their automation journey.
+            </p>
+            <a className="pcard-cta" href="/about">One Partner for Your Entire Journey</a>
           </div>
-        </section>
-      ))}
-    </>
+        </article>
+      </div>
+    </section>
   );
 }

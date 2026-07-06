@@ -1,65 +1,77 @@
-/* ============================================================
-   ProblemBlocks — eight pain-led blocks (Problems We Solve page)
-   Tones alternate light / soft like the case-studies rows.
-   ============================================================ */
+/* Dark problems grid — layout modelled on cps.co.uk/problems-we-solve */
+.pblocks {
+  background: #081a29;
+  padding: 88px 0;
+}
+.pblocks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 72px;
+}
 
-.prob { padding: 84px 0; }
-.prob--light { background: #ffffff; }
-.prob--soft { background: var(--bg); }
-
-.prob-inner {
+/* card */
+.pcard {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 64px;
+  background: #0e2740;
+  border-right: 6px solid var(--pcard-accent, var(--blue));
 }
-.prob-num {
-  width: 88px;
-  flex-shrink: 0;
-  padding-top: 12px;
-  font-size: 24px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: var(--blue);
-}
-.prob-main {
-  max-width: 900px;
+.pcard-body {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 56px 58px 52px;
 }
-.prob-h {
-  font-size: 48px;
-  line-height: 56px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  color: #18181a;
+.pcard-h {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: -0.3px;
 }
-.prob-desc {
-  font-size: 20px;
-  line-height: 30px;
-  color: #4b4d50;
+.pcard-desc {
+  font-size: 17px;
+  line-height: 27px;
+  color: rgba(255, 255, 255, 0.86);
 }
-.prob-link {
+.pcard-cta {
+  margin-top: auto;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 4px;
-  font-size: 18px;
-  line-height: 24px;
+  padding: 13px 26px;
+  border-radius: 50px;
+  background: var(--pcard-accent, var(--blue));
+  color: #fff;
+  font-size: 17px;
   font-weight: 500;
-  color: var(--blue);
-  transition: gap .15s ease;
+  line-height: 24px;
+  transition: filter 0.15s ease, transform 0.15s ease;
 }
-.prob-link:hover { gap: 18px; }
+.pcard-cta:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+/* accent palette */
+.pcard--orange { --pcard-accent: #f97316; }
+.pcard--green  { --pcard-accent: #199f68; }
+.pcard--yellow { --pcard-accent: #eda815; }
+.pcard--red    { --pcard-accent: #e0435c; }
+.pcard--blue   { --pcard-accent: #2563eb; }
+.pcard--sky    { --pcard-accent: #3eb1ff; }
+.pcard--yellow .pcard-cta { color: #14213a; }
+.pcard--sky .pcard-cta { color: #0b2036; }
+
+/* full-width card */
+.pcard--wide { margin-top: 56px; }
+.pcard--wide .pcard-body { max-width: 1100px; }
 
 /* ---- Mobile (<=1024px) ---- */
 @media (max-width: 1024px) {
-  .prob { padding: 48px 0; }
-  .prob-inner { flex-direction: column; gap: 14px; }
-  .prob-num { width: auto; padding-top: 0; font-size: 18px; }
-  .prob-main { max-width: 100%; gap: 16px; }
-  .prob-h { font-size: clamp(26px, 6.8vw, 48px); line-height: 1.16; }
-  .prob-desc { font-size: 16px; line-height: 25px; }
-  .prob-link { font-size: 16px; gap: 10px; }
+  .pblocks { padding: 56px 0; }
+  .pblocks-grid { grid-template-columns: 1fr; gap: 28px; }
+  .pcard { border-right-width: 5px; }
+  .pcard-body { padding: 34px 26px 32px; gap: 16px; }
+  .pcard-h { font-size: 25px; line-height: 32px; }
+  .pcard-desc { font-size: 16px; line-height: 25px; }
+  .pcard-cta { font-size: 15px; padding: 12px 20px; line-height: 22px; }
+  .pcard--wide { margin-top: 28px; }
 }

@@ -4,22 +4,30 @@ import './ProblemsHero.css';
 export default function ProblemsHero() {
   return (
     <div className="phero">
-      <div className="container">
+      <div className="container phero-inner">
         <h1 className="phero-h1">
           <span className="phero-box">Problems</span> We Solve
         </h1>
         <p className="phero-lede">
-          Solving the business problems that slow you down, with AI and automation that
-          deliver real results.
+          Solving today&rsquo;s biggest business challenges, with AI and automation
+          expertise that delivers real results.
         </p>
         <p className="phero-desc">
-          Every business faces the same squeeze: more to do, tighter margins, and not enough
-          hours. At Rifby, we help you cut through it, using agentic AI, workflow automation,
-          and custom software to remove the bottlenecks that hold your business back.
+          Every business faces a unique mix of pressures: tighter budgets, growing
+          expectations, evolving technology, and the need to deliver more with less.
+          At Rifby, we help you cut through complexity, using agentic AI, workflow
+          automation, and custom software to solve your most important business problems.
         </p>
         <p className="phero-desc">
-          We’ve grouped the most common problems we’re asked to solve into eight areas. If one
-          sounds familiar, that’s where to start.
+          Whether you&rsquo;re in professional services, retail, hospitality, or field
+          services, we combine deep technical expertise with sector insight to help you
+          transform operations, empower people, and deliver lasting impact.
+        </p>
+        <h2 className="phero-explore">Explore the Problems We Solve</h2>
+        <p className="phero-desc">
+          We&rsquo;ve grouped the most common challenges our clients face, and how Rifby
+          helps solve them, into eight focus areas. Each one explains the issue, its
+          real-world impact, and how we help you overcome it.
         </p>
       </div>
     </div>
