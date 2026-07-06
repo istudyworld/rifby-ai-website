@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Nav from '../components/Nav.jsx';
+import WhoWeHelp from '../components/WhoWeHelp.jsx';
 import CasesHero from '../components/CasesHero.jsx';
 import CaseRow from '../components/CaseRow.jsx';
 import Footer from '../components/Footer.jsx';
@@ -174,6 +175,7 @@ export default function CaseStudies() {
     <main>
       <section className="chero-section">
         <Nav />
+        <WhoWeHelp />
         <CasesHero categories={CATEGORIES} active={active} onSelect={setActive} />
       </section>
 
