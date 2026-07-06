@@ -17,6 +17,7 @@ const COLUMNS = [
     title: 'Contact',
     links: [
       { label: 'info@rifby.ai', href: 'mailto:info@rifby.ai' },
+      { label: '01483 963255', href: 'tel:+441483963255' },
       { label: 'Book a call', href: '/contact' },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/company/rifby', target: '_blank' },
     ],

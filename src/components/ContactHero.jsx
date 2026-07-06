@@ -64,6 +64,9 @@ export default function ContactHero() {
               <input className="cbook-input" type="email" name="email" placeholder="Type your email" aria-label="Your email" required />
               <button className="cbook-send" type="submit">Send</button>
             </form>
+            <span className="cbook-phone">
+              Or call us on <a href="tel:+441483963255">01483 963255</a>
+            </span>
           </div>
         </div>
 
