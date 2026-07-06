@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Nav from '../components/Nav.jsx';
 import ServicesHero from '../components/ServicesHero.jsx';
 import ServiceBlock from '../components/ServiceBlock.jsx';
@@ -6,6 +6,7 @@ import Footer from '../components/Footer.jsx';
 
 const BLOCKS = [
   {
+    id: 'ai-strategy',
     tone: 'dark',
     heading: { highlight: 'AI Strategy', rest: ' clarity before code' },
     lead: 'A two-week engagement that turns "we should use AI somewhere" into a ranked, costed, de-risked plan.',
@@ -31,6 +32,7 @@ const BLOCKS = [
     ],
   },
   {
+    id: 'custom-automation',
     tone: 'light',
     reversed: true,
     heading: { highlight: 'Custom Automation', rest: ' built to fit owned forever' },
@@ -57,6 +59,7 @@ const BLOCKS = [
     ],
   },
   {
+    id: 'custom-software',
     tone: 'blue',
     heading: { highlight: 'Custom Software', rest: ' built around you owned by you', box: true },
     lead: 'Bespoke web apps, internal tools, and client portals for when off-the-shelf software cannot do the job.',
@@ -83,6 +86,7 @@ const BLOCKS = [
     ],
   },
   {
+    id: 'data-insights',
     tone: 'data',
     heading: { highlight: 'Data-Driven', rest: ' Insights turn logs into leverage.' },
     lead: 'Dashboards and analytics pipelines that turn the data your ops already generate into decisions the business can act on.',
@@ -110,6 +114,18 @@ const BLOCKS = [
 ];
 
 export default function Services() {
+  // The blocks don't exist until React mounts, so the browser's native
+  // #hash scroll (e.g. /services#custom-software) fires too early.
+  // Re-run it once the blocks are in the DOM.
+  useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView();
+    });
+  }, []);
+
   return (
     <main>
       <section className="shero">
