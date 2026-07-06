@@ -45,8 +45,8 @@ export default function AboutTeam() {
             </div>
             <div className="at-card-body">
               <div className="at-card-meta">
-                <span className="at-card-name">John Smith <VerifiedBadge /></span>
-                <span className="at-card-role">Founder, Rifby LTD</span>
+                <span className="at-card-name">Joseph Idowu <VerifiedBadge /></span>
+                <span className="at-card-role">Founder &amp; CEO, Rifby LTD</span>
               </div>
               <div className="at-card-actions">
                 <a className="at-btn at-btn-light" href="https://www.linkedin.com/company/rifby" target="_blank" rel="noreferrer">

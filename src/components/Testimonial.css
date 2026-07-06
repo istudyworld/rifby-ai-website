@@ -74,7 +74,7 @@
   padding: 57px 0 0;
 }
 .testi-cases-inner {
-  width: 1182px;
+  width: 1380px;
   max-width: calc(100% - 120px);
   margin: 0 auto;
   display: flex;
@@ -87,16 +87,17 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  gap: 32px;
 }
 .testi-case {
-  width: 303px;
+  flex: 1 1 0;
+  min-width: 0;
   min-height: 173px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.testi-case-top { display: flex; flex-direction: column; gap: 20px; }
+.testi-case-top { display: flex; flex-direction: column; gap: 14px; }
 .testi-badge {
   align-self: flex-start;
   padding: 6px 14px;
@@ -106,13 +107,19 @@
   line-height: 21px;
   border-radius: 50px;
 }
+.testi-case-company {
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 600;
+  color: var(--blue);
+}
 .testi-case-text {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 23px;
   font-weight: 500;
   color: #18181a;
 }
-.testi-case-arrow { align-self: flex-end; }
+.testi-case-arrow { align-self: flex-end; display: flex; padding: 4px 0; }
 
 .testi-divider {
   position: relative;
@@ -164,7 +171,7 @@
   }
   .testi-cases-row { flex-direction: column; gap: 24px; }
   .testi-divider { display: none; }
-  .testi-case { width: 100%; min-height: 0; gap: 14px; justify-content: flex-start; }
+  .testi-case { flex: none; width: 100%; min-height: 0; gap: 14px; justify-content: flex-start; }
   .testi-case-arrow { margin-top: 2px; }
   .testi-cta { width: 100%; padding: 15px 24px; }
 }

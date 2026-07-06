@@ -19,14 +19,15 @@ export default function Team() {
         <img className="team-av" src={AV('team-3')} alt="Team member" style={{ width: 146, height: 146, left: 1274, top: 292 }} />
         <img className="team-av" src={AV('team-4')} alt="Team member" style={{ width: 108, height: 108, left: 913, top: 228 }} />
 
-        {/* labelled avatars */}
-        <div className="team-tag team-tag-left" style={{ left: 488, top: 120 }}>
-          <img className="team-av" src={AV('team-annie')} alt="Annie" style={{ width: 108, height: 108 }} />
-          <span className="team-name">Annie</span>
-        </div>
+        {/* labelled avatars — only documented team member is the founder;
+            photo is still a placeholder pending a real headshot */}
+        <img className="team-av" src={AV('team-annie')} alt="Team member" style={{ width: 108, height: 108, left: 488, top: 120 }} />
         <div className="team-tag team-tag-right" style={{ left: 941, top: 679 }}>
-          <span className="team-name">Smith John</span>
-          <img className="team-av" src={AV('team-john')} alt="Smith John" style={{ width: 108, height: 108 }} />
+          <span className="team-name">
+            Joseph Idowu
+            <span className="team-name-role">Founder &amp; CEO</span>
+          </span>
+          <img className="team-av" src={AV('team-john')} alt="Joseph Idowu, Founder and CEO of Rifby" style={{ width: 108, height: 108 }} />
         </div>
 
         {/* center content */}

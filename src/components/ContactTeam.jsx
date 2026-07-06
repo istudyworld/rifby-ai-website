@@ -40,8 +40,10 @@ export default function ContactTeam() {
           />
         ))}
 
-        <span className="cteam-name cteam-name--aniie">Aniie</span>
-        <span className="cteam-name cteam-name--smith">Smith Jhon</span>
+        <span className="cteam-name cteam-name--founder">
+          Joseph Idowu
+          <span className="cteam-name-role">Founder &amp; CEO</span>
+        </span>
 
         <div className="cteam-center">
           <h2 className="cteam-h2">Our <span className="cteam-hl">Team</span></h2>

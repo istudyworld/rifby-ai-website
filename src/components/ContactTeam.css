@@ -27,8 +27,10 @@
 .cteam-name {
   position: absolute;
   display: inline-flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  gap: 2px;
   padding: 14px 20px;
   background: var(--bg);
   border-radius: 8px;
@@ -37,8 +39,12 @@
   color: #000;
   box-shadow: 0 7px 5px rgba(0,0,0,.02), 0 22px 18px rgba(0,0,0,.04), 0 100px 80px rgba(0,0,0,.07);
 }
-.cteam-name--aniie { left: 616px; top: 143px; }
-.cteam-name--smith { left: 941px; top: 702px; }
+.cteam-name-role {
+  font-size: 18px;
+  line-height: 22px;
+  color: #6b6c70;
+}
+.cteam-name--founder { left: 941px; top: 690px; }
 
 .cteam-center {
   position: absolute;
