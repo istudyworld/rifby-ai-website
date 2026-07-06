@@ -30,8 +30,8 @@
 
 .cbook-form-wrap { margin-top: 44px; display: flex; flex-direction: column; gap: 10px; }
 .cbook-form-label { font-size: 20px; line-height: 30px; color: #131415; }
-.cbook-phone { margin-top: 6px; font-size: 20px; line-height: 30px; color: #131415; }
-.cbook-phone a { color: var(--blue); font-weight: 500; text-decoration: none; }
+.cbook-phone { display: flex; align-items: center; gap: 8px; margin-top: 26px; font-size: 20px; line-height: 30px; color: #131415; }
+.cbook-phone a { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-weight: 500; text-decoration: none; }
 .cbook-phone a:hover { text-decoration: underline; }
 .cbook-form {
   display: flex;
