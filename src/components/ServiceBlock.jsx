@@ -25,6 +25,7 @@ function Heading({ heading }) {
 }
 
 export default function ServiceBlock({
+  id,
   tone,
   reversed = false,
   heading,
@@ -38,7 +39,7 @@ export default function ServiceBlock({
   process = [],
 }) {
   return (
-    <section className={`svc svc--${tone}${reversed ? ' svc--reversed' : ''}`}>
+    <section id={id} className={`svc svc--${tone}${reversed ? ' svc--reversed' : ''}`}>
       <div className="container">
         <div className="svc-inner">
           <div className="svc-text-col">

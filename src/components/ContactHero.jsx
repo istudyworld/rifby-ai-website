@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './ContactHero.css';
+import PhoneIcon from './PhoneIcon.jsx';
 
 const CALENDLY = 'https://calendly.com/joseph-rifby/30min';
 const EMBED_URL = `${CALENDLY}?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0060ff`;
@@ -67,12 +68,7 @@ export default function ContactHero() {
             <span className="cbook-phone">
               Or call us on{' '}
               <a href="tel:+441483963255">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path
-                    d="M16.78 13.7c-.41-.2-1.4-.69-1.79-.69s-.62.39-1.1.69-.65.39-1.04.39-1.05-.46-1.81-1.12c-.6-.52-1.2-1.18-1.62-1.91-.39-.69-.39-1.04 0-1.43s.69-.65.69-1.04-.49-1.38-.69-1.79-.49-1.04-.93-1.04c-.39 0-.91.16-1.36.61C5.4 5.59 5 6.4 5 7.27c0 1.51.79 3.19 2.36 4.96 1.91 2.14 4.21 3.5 6.05 3.5.87 0 1.68-.4 2.91-1.61.45-.45.61-.97.61-1.36 0-.44-.55-.86-.96-1.06Z"
-                    stroke="var(--blue)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"
-                  />
-                </svg>
+                <PhoneIcon color="var(--blue)" size={20} />
                 01483 963255
               </a>
             </span>
