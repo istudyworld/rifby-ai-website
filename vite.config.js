@@ -10,6 +10,7 @@ const root = import.meta.dirname;
 function cleanUrls() {
   const routes = {
     '/about': '/about.html',
+    '/problems': '/problems.html',
     '/services': '/services.html',
     '/case-studies': '/case-studies.html',
     '/contact': '/contact.html',
@@ -36,6 +37,7 @@ export default defineConfig({
       input: {
         main: resolve(root, 'index.html'),
         about: resolve(root, 'about.html'),
+        problems: resolve(root, 'problems.html'),
         // Pages are added here as they are built (Figma redesign, page by page):
         services: resolve(root, 'services.html'),
         'case-studies': resolve(root, 'case-studies.html'),
