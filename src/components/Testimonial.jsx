@@ -21,12 +21,14 @@ function Chevron({ dir }) {
   );
 }
 
-// One testimonial per case study, in case-studies page order. Drafted from the
-// case-study facts — pending Joseph's sign-off (see FEEDBACK-2026-07-06.md).
+// One testimonial per case study, in case-studies page order. Quotes drafted
+// from the case-study facts — pending client sign-off. Named attributions
+// supplied by Joseph 2026-07-06; entries without a name show role + company.
 const TESTIMONIALS = [
   {
     quote:
       'I was drowning in reconciliation. Rifby built AI into how the practice runs and gave me twenty hours a week back. I spend that time advising clients now, not chasing paperwork.',
+    name: 'Shakeel Ahmad',
     role: 'Owner',
     company: 'Ahmad & Co Accountant',
     slug: 'ahmad-co-accountant',
@@ -34,28 +36,32 @@ const TESTIMONIALS = [
   {
     quote:
       'Invoicing used to eat days every month. Now it runs end to end without me touching it. Fifteen hours a week back, and we haven’t missed a single invoice since.',
-    role: 'Director',
+    name: 'Ben Scott',
+    role: 'Operational Director',
     company: 'ISW Consulting LTD',
     slug: 'isw-consulting',
   },
   {
     quote:
       'Rifby took our companion app from brief to a live release on iOS and Android in six weeks. They worked like an extension of our own team.',
-    role: 'Studio Lead',
+    name: 'Jamal Almari',
+    role: 'Director',
     company: 'Tmtam Studio',
     slug: 'tmtam-studio',
   },
   {
     quote:
       'Social media used to be a daily chore we never kept up with. Rifby put our scheduling on autopilot across four platforms and saves us eight hours every week.',
-    role: 'Owner',
+    name: 'Emmanuel Sekumade',
+    role: 'Operational Director',
     company: 'Another World Camberley',
     slug: 'another-world',
   },
   {
     quote:
       'Rifby delivered the brand and the build. We went from no online presence to a website our customers actually order from.',
-    role: 'Founder',
+    name: 'Oyinkansola Akinniran',
+    role: 'Managing Director',
     company: 'Hunny’s Taste',
     slug: 'hunnys-taste',
   },
@@ -82,9 +88,35 @@ const TESTIMONIALS = [
   },
 ];
 
-const CASE_TEXT =
-  'A SaaS company, 250 engineers. Zero AI usage to 28% AI-generated code in six weeks. Code review time down 42%.';
-const CASES = [CASE_TEXT, CASE_TEXT, CASE_TEXT];
+// Real case studies (summaries derived from the /case-studies rows — see
+// ROWS in src/pages/CaseStudies.jsx; keep stats in sync with that page).
+const CASES = [
+  {
+    company: 'Ahmad & Co Accountant',
+    text: 'A solo accounting practice turned AI-powered firm. Reconciliation and client prep run AI-assisted, saving 20 hours a week.',
+    slug: 'ahmad-co-accountant',
+  },
+  {
+    company: 'ISW Consulting LTD',
+    text: 'Client invoicing automated end to end. 15 hours saved every week and not a single missed invoice.',
+    slug: 'isw-consulting',
+  },
+  {
+    company: 'Tmtam Studio',
+    text: 'A companion app for a flagship game product, shipped to iOS and Android in six weeks.',
+    slug: 'tmtam-studio',
+  },
+  {
+    company: 'Another World Camberley',
+    text: 'Social scheduling on autopilot across four synced platforms, saving 8 hours every week.',
+    slug: 'another-world',
+  },
+  {
+    company: 'Hunny’s Taste',
+    text: 'A food brand website built for ordering. Brand and build delivered end to end.',
+    slug: 'hunnys-taste',
+  },
+];
 
 export default function Testimonial() {
   const [index, setIndex] = useState(0);
@@ -107,8 +139,8 @@ export default function Testimonial() {
           <span className="testi-mark" aria-hidden="true">”</span>
           <blockquote className="testi-text">{t.quote}</blockquote>
           <div className="testi-author-meta">
-            <span className="testi-name">{t.role}</span>
-            <span className="testi-role">{t.company}</span>
+            <span className="testi-name">{t.name || t.role}</span>
+            <span className="testi-role">{t.name ? `${t.role}, ${t.company}` : t.company}</span>
           </div>
           <a className="btn btn-primary testi-more" href={`/case-studies#${t.slug}`}>
             See More
@@ -128,8 +160,8 @@ export default function Testimonial() {
       <div className="testi-cases">
         <div className="testi-cases-inner">
           <div className="testi-cases-row">
-            {CASES.map((text, i) => (
-              <React.Fragment key={i}>
+            {CASES.map((c, i) => (
+              <React.Fragment key={c.slug}>
                 {i > 0 && (
                   <div className="testi-divider">
                     <span className="testi-divider-fill" />
@@ -138,9 +170,16 @@ export default function Testimonial() {
                 <div className="testi-case">
                   <div className="testi-case-top">
                     <span className="testi-badge">Case Study</span>
-                    <p className="testi-case-text">{text}</p>
+                    <span className="testi-case-company">{c.company}</span>
+                    <p className="testi-case-text">{c.text}</p>
                   </div>
-                  <span className="testi-case-arrow"><ArrowMini /></span>
+                  <a
+                    className="testi-case-arrow"
+                    href={`/case-studies#${c.slug}`}
+                    aria-label={`Read the ${c.company} case study`}
+                  >
+                    <ArrowMini />
+                  </a>
                 </div>
               </React.Fragment>
             ))}
