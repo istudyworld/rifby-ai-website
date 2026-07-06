@@ -1,3 +1,11 @@
+---
+type: Project
+title: Rifby AI — Marketing Website
+description: Rifby's own marketing site (Vite + React MPA) — live at rifby.ai, deployed on Vercel.
+resource: https://rifby.ai
+tags: [internal, website, marketing, vite, react]
+---
+
 # Rifby
 
 Marketing site for Rifby — AI automation, built for your business.
@@ -48,7 +56,7 @@ Hosted on Vercel as a static site. `vercel.json` enables `cleanUrls` so `/about`
 
 The site was built pixel-faithful to the **1512px desktop** Figma, then made mobile-responsive
 in a per-component pass (July 2026). Every change is **additive and scoped inside a media query**,
-so the desktop layout (≥1101px) is unchanged.
+so the true desktop layout (≥1512px) is unchanged.
 
 **Breakpoints**
 - `@media (max-width: 1024px)` — main reflow for components that shipped with *no* responsive rules
@@ -56,6 +64,18 @@ so the desktop layout (≥1101px) is unchanged.
   (Services, Case Studies, Contact, Legal).
 - `@media (max-width: 600px)` — phone type scale, padding, full-width CTAs. `480px` for the
   global `.container` gutter (60px → 32px → 20px).
+
+**Laptop scale-to-fit (1025–1511px)**
+
+Between the tablet breakpoints and the 1512px canvas the desktop layout used to overlap and
+overflow (common laptop widths: 1152, 1280, 1366, 1440). Fixed with stepped `zoom` on `body`
+in `global.css`: each step's zoom = band minimum ÷ 1512, so the effective layout width is
+always ≥ 1512px and the desktop design renders pixel-perfect, just scaled. Media queries
+evaluate against the *real* viewport, so all existing breakpoints are unaffected. Home/About
+carry `<body class="fit-canvas">` to extend the zoom down to 1025px (their tablet reflow
+starts at 1024px; the other pages switch to tablet layouts at 1100px and must not be zoomed
+there — those pages instead get a relaxed desktop footer in the 1025–1100px band, see
+`Footer.css`). ≥1512px and ≤1024px render exactly as before.
 
 **Reusable patterns**
 - Fluid headings via `font-size: clamp(min, vw, max)` instead of fixed 68–80px.
@@ -79,9 +99,8 @@ so the desktop layout (≥1101px) is unchanged.
   the audit now *always* scans for elements escaping the viewport. Decorative elements inside an
   `overflow:hidden` parent (e.g. `.delib-star`) show up as false-positive offenders — always confirm
   against a screenshot.
-- **Pre-existing:** the desktop **laptop range (~1025–1450px)** has layout issues (e.g. the About
-  hero overlaps at 1280) because the design is a fixed 1512px canvas. Independent of this mobile
-  work; needs a separate tablet/desktop-fluid pass.
+- ~~**Pre-existing:** the desktop **laptop range (~1025–1450px)** has layout issues~~ — fixed by
+  the laptop scale-to-fit pass above (July 2026).
 
 **Verification scripts** (need `playwright`, already a dev dep):
 - `node scripts/audit.mjs <url> 390x844` — overflow + tap-target + font-size audit.

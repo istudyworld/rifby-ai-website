@@ -72,6 +72,22 @@ h1, h2, h3, h4, p { margin: 0; }
   .container { padding-left: 20px; padding-right: 20px; }
 }
 
+/* ---- Laptop scale-to-fit (1025–1511px) ----
+   The desktop design is a fixed 1512px canvas; between the tablet
+   breakpoints and 1512px it overlaps/overflows. Scale the whole canvas
+   with stepped zoom so the effective layout width is always >= 1512px
+   (each step's zoom = band minimum / 1512). Media queries evaluate
+   against the real viewport, so all existing breakpoints still apply.
+   >= 1512px and <= 1024px are untouched. */
+@media (min-width: 1451px) and (max-width: 1511px) { body { zoom: 0.9596; } }
+@media (min-width: 1341px) and (max-width: 1450px) { body { zoom: 0.8869; } }
+@media (min-width: 1251px) and (max-width: 1340px) { body { zoom: 0.8274; } }
+@media (min-width: 1171px) and (max-width: 1250px) { body { zoom: 0.7744; } }
+@media (min-width: 1101px) and (max-width: 1170px) { body { zoom: 0.7282; } }
+/* Home/About only: their tablet reflow starts at 1024px (the other pages
+   switch to tablet layouts at 1100px and must not be zoomed there). */
+@media (min-width: 1025px) and (max-width: 1100px) { body.fit-canvas { zoom: 0.6779; } }
+
 /* ---- Buttons ---- */
 .btn {
   display: inline-flex;
