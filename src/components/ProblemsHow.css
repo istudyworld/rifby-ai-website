@@ -1,83 +1,144 @@
-/* ---- How we work with you (dark band) ---- */
-.phow {
-  background: #0e0e0f;
-  padding: 100px 0;
+/* Why-choose + enquiry form panels (dark) — modelled on cps.co.uk */
+.pwhy {
+  background: #081a29;
+  padding: 0 0 96px;
 }
-.phow-title {
-  font-size: 56px;
-  line-height: 64px;
+.pwhy-panel {
+  background: #0e2740;
+  border-right: 6px solid #f97316;
+  padding: 56px 60px 52px;
+}
+.pwhy-panel--form {
+  margin-top: 56px;
+  border-right-color: #3eb1ff;
+}
+.pwhy-h {
+  font-size: 38px;
+  line-height: 46px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+.pwhy-lede {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 1100px;
+}
+.pwhy-lede strong { color: #fff; }
+.pwhy-tel { color: #3eb1ff; font-weight: 500; }
+.pwhy-tel:hover { text-decoration: underline; }
+.pwhy-sub {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
   font-weight: 500;
-  letter-spacing: -1px;
-  color: #ffffff;
-  margin-bottom: 56px;
 }
-.phow-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-.phow-step {
-  border-top: 1px solid #343437;
-  padding-top: 24px;
+.pwhy-list {
+  margin-top: 14px;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.phow-step-num {
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: var(--blue-accent);
+.pwhy-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 17px;
+  line-height: 26px;
+  color: rgba(255, 255, 255, 0.88);
 }
-.phow-step-h {
-  font-size: 26px;
-  line-height: 32px;
-  font-weight: 500;
-  color: #ffffff;
+.pwhy-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: #3eb1ff;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
 }
-.phow-step-desc {
-  font-size: 16px;
-  line-height: 25px;
-  color: #b9bcc1;
+.pwhy-list strong { color: #fff; }
+.pwhy-close {
+  margin-top: 26px;
+  font-size: 17px;
+  line-height: 27px;
+  color: rgba(255, 255, 255, 0.88);
 }
 
-/* ---- consultation CTA ---- */
-.pcta { background: #ffffff; padding: 120px 0; }
-.pcta-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+/* ---- enquiry form ---- */
+.pform { margin-top: 34px; }
+.pform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+  max-width: 1240px;
 }
-.pcta-h {
-  max-width: 820px;
-  font-size: 56px;
-  line-height: 64px;
+.pform-input {
+  height: 52px;
+  padding: 0 18px;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 16px;
+  color: #14213a;
+}
+.pform-input::placeholder { color: #7b8291; }
+.pform-areas {
+  margin-top: 28px;
+  border: none;
+}
+.pform-legend {
+  font-size: 18px;
   font-weight: 500;
-  letter-spacing: -1px;
-  color: #18181a;
+  color: #fff;
 }
-.pcta-desc {
-  margin-top: 20px;
-  max-width: 620px;
-  font-size: 20px;
-  line-height: 30px;
-  color: #4b4d50;
+.pform-legend em {
+  font-size: 14px;
+  font-style: italic;
+  color: #eda815;
+  font-weight: 400;
 }
-.pcta-btn { margin-top: 40px; }
+.pform-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}
+.pform-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--blue);
+}
+.pform-submit {
+  margin-top: 30px;
+  padding: 13px 34px;
+  border-radius: 50px;
+  background: var(--blue);
+  color: #fff;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 500;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.pform-submit:hover { filter: brightness(1.1); transform: translateY(-1px); }
 
 /* ---- Mobile (<=1024px) ---- */
 @media (max-width: 1024px) {
-  .phow { padding: 56px 0; }
-  .phow-title { font-size: clamp(28px, 7.6vw, 56px); line-height: 1.12; margin-bottom: 32px; }
-  .phow-grid { grid-template-columns: 1fr; gap: 24px; }
-  .phow-step { padding-top: 18px; gap: 8px; }
-  .phow-step-h { font-size: 22px; line-height: 28px; }
-  .phow-step-desc { font-size: 15px; line-height: 23px; }
-
-  .pcta { padding: 64px 0; }
-  .pcta-h { font-size: clamp(28px, 7.6vw, 56px); line-height: 1.12; }
-  .pcta-desc { margin-top: 16px; font-size: 16px; line-height: 25px; }
-  .pcta-btn { margin-top: 28px; width: 100%; }
+  .pwhy { padding-bottom: 56px; }
+  .pwhy-panel { padding: 34px 26px 32px; border-right-width: 5px; }
+  .pwhy-panel--form { margin-top: 28px; }
+  .pwhy-h { font-size: 26px; line-height: 33px; }
+  .pwhy-lede { font-size: 16px; line-height: 25px; }
+  .pwhy-list li { font-size: 16px; line-height: 25px; }
+  .pwhy-close { font-size: 16px; line-height: 25px; }
+  .pform-grid { grid-template-columns: 1fr; gap: 12px; }
+  .pform-submit { width: 100%; }
 }
