@@ -1,0 +1,65 @@
+/* ============================================================
+   ProblemBlocks — eight pain-led blocks (Problems We Solve page)
+   Tones alternate light / soft like the case-studies rows.
+   ============================================================ */
+
+.prob { padding: 84px 0; }
+.prob--light { background: #ffffff; }
+.prob--soft { background: var(--bg); }
+
+.prob-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+.prob-num {
+  width: 88px;
+  flex-shrink: 0;
+  padding-top: 12px;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--blue);
+}
+.prob-main {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.prob-h {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #18181a;
+}
+.prob-desc {
+  font-size: 20px;
+  line-height: 30px;
+  color: #4b4d50;
+}
+.prob-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--blue);
+  transition: gap .15s ease;
+}
+.prob-link:hover { gap: 18px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .prob { padding: 48px 0; }
+  .prob-inner { flex-direction: column; gap: 14px; }
+  .prob-num { width: auto; padding-top: 0; font-size: 18px; }
+  .prob-main { max-width: 100%; gap: 16px; }
+  .prob-h { font-size: clamp(26px, 6.8vw, 48px); line-height: 1.16; }
+  .prob-desc { font-size: 16px; line-height: 25px; }
+  .prob-link { font-size: 16px; gap: 10px; }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../components/Nav.jsx';
 import AboutHero from '../components/AboutHero.jsx';
 import AboutStats from '../components/AboutStats.jsx';
+import WhyRifby from '../components/WhyRifby.jsx';
 import AboutServices from '../components/AboutServices.jsx';
 import AboutTeam from '../components/AboutTeam.jsx';
 import AboutPrinciples from '../components/AboutPrinciples.jsx';
@@ -16,6 +17,7 @@ export default function About() {
         <AboutHero />
       </section>
       <AboutStats />
+      <WhyRifby />
       <AboutServices />
       <AboutTeam />
       <AboutPrinciples />

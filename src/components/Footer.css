@@ -52,6 +52,17 @@
 .footer-legal a:hover { color: #fff; }
 .footer-dot { width: 8px; height: 8px; border-radius: 50%; background: #b5b7ba; }
 
+/* ---- 1025–1100px on pages without body.fit-canvas ----
+   (Services/Case Studies/Contact/Legal show tablet layouts here but the
+   footer's desktop layout is sized to the 1512px canvas; relax the rigid
+   gaps and fixed column widths so it fits.) */
+@media (min-width: 1025px) and (max-width: 1100px) {
+  body:not(.fit-canvas) .footer-inner { padding: 60px 40px; }
+  body:not(.fit-canvas) .footer-top { gap: 64px; }
+  body:not(.fit-canvas) .footer-cols { gap: 40px; }
+  body:not(.fit-canvas) .footer-col { width: auto; min-width: 140px; }
+}
+
 /* ---- Mobile (<=1024px) ---- */
 @media (max-width: 1024px) {
   .footer-inner { padding: 48px 24px; gap: 44px; }

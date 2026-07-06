@@ -1,0 +1,85 @@
+/* ============================================================
+   WhyRifby — "Why Rifby?" narrative + differentiators (About page)
+   Sits between the dark AboutStats band and the grey AboutServices.
+   ============================================================ */
+
+.why { background: #ffffff; padding: 120px 0; }
+
+.why-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 92px;
+}
+
+/* left — narrative */
+.why-left {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.why-title {
+  font-size: 68px;
+  line-height: 75px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #18181a;
+}
+.why-highlight {
+  background: var(--blue);
+  color: #fff;
+  padding: 0 14px;
+  border-radius: 8px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.why-copy { display: flex; flex-direction: column; gap: 24px; }
+.why-copy p { font-size: 18px; line-height: 29px; color: #515356; }
+.why-close { font-size: 20px; line-height: 30px; font-weight: 500; color: #18181a; }
+
+/* right — differentiators card */
+.why-right {
+  width: 520px;
+  flex-shrink: 0;
+  background: var(--bg);
+  border-radius: 20px;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.why-sub { font-size: 28px; line-height: 34px; font-weight: 500; color: #18181a; }
+.why-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 17px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #18181a;
+}
+.why-tick { flex-shrink: 0; display: flex; margin-top: 2px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .why { padding: 56px 0; }
+  .why-row { flex-direction: column; gap: 36px; }
+  .why-left { max-width: 100%; gap: 28px; }
+  .why-title { font-size: clamp(32px, 8.4vw, 68px); line-height: 1.1; }
+  .why-highlight { padding: 0 8px; }
+  .why-copy { gap: 18px; }
+  .why-copy p { font-size: 16px; line-height: 25px; }
+  .why-close { font-size: 17px; line-height: 26px; }
+  .why-right { width: 100%; padding: 28px 20px; gap: 22px; }
+  .why-sub { font-size: 22px; line-height: 28px; }
+  .why-item { font-size: 15px; line-height: 23px; gap: 12px; }
+}

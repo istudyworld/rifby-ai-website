@@ -1,0 +1,83 @@
+/* ---- How we work with you (dark band) ---- */
+.phow {
+  background: #0e0e0f;
+  padding: 100px 0;
+}
+.phow-title {
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 56px;
+}
+.phow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.phow-step {
+  border-top: 1px solid #343437;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.phow-step-num {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--blue-accent);
+}
+.phow-step-h {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.phow-step-desc {
+  font-size: 16px;
+  line-height: 25px;
+  color: #b9bcc1;
+}
+
+/* ---- consultation CTA ---- */
+.pcta { background: #ffffff; padding: 120px 0; }
+.pcta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.pcta-h {
+  max-width: 820px;
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #18181a;
+}
+.pcta-desc {
+  margin-top: 20px;
+  max-width: 620px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #4b4d50;
+}
+.pcta-btn { margin-top: 40px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .phow { padding: 56px 0; }
+  .phow-title { font-size: clamp(28px, 7.6vw, 56px); line-height: 1.12; margin-bottom: 32px; }
+  .phow-grid { grid-template-columns: 1fr; gap: 24px; }
+  .phow-step { padding-top: 18px; gap: 8px; }
+  .phow-step-h { font-size: 22px; line-height: 28px; }
+  .phow-step-desc { font-size: 15px; line-height: 23px; }
+
+  .pcta { padding: 64px 0; }
+  .pcta-h { font-size: clamp(28px, 7.6vw, 56px); line-height: 1.12; }
+  .pcta-desc { margin-top: 16px; font-size: 16px; line-height: 25px; }
+  .pcta-btn { margin-top: 28px; width: 100%; }
+}

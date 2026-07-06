@@ -15,6 +15,7 @@ function PhoneIcon() {
 }
 
 const LINKS = [
+  { label: 'Problems We Solve', href: '/problems' },
   { label: 'About', href: '/about' },
   { label: 'Case Studies', href: '/case-studies' },
   { label: 'Services', href: '/services' },

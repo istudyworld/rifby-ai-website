@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from '../components/Nav.jsx';
 import CasesHero from '../components/CasesHero.jsx';
 import CaseRow from '../components/CaseRow.jsx';
@@ -28,6 +28,7 @@ function categoryOf(row) {
 
 const ROWS = [
   {
+    slug: 'ahmad-co-accountant',
     tone: 'dark',
     smallCompany: true,
     company: 'Ahmad & Co Accountant',
@@ -51,6 +52,7 @@ const ROWS = [
     photoAlt: 'Accounting work assisted by AI',
   },
   {
+    slug: 'isw-consulting',
     tone: 'blue',
     reversed: true,
     smallCompany: true,
@@ -70,6 +72,7 @@ const ROWS = [
     photoAlt: 'Invoicing automation in use',
   },
   {
+    slug: 'tmtam-studio',
     tone: 'light',
     company: 'Tmtam Studio for Game Development W.L.L',
     heading: 'Companion app for a Flagship game product',
@@ -82,6 +85,7 @@ const ROWS = [
     photoAlt: 'Mobile companion app',
   },
   {
+    slug: 'another-world',
     tone: 'blue',
     reversed: true,
     company: 'Another World Camberley',
@@ -95,6 +99,7 @@ const ROWS = [
     photoAlt: 'Social content scheduling',
   },
   {
+    slug: 'hunnys-taste',
     tone: 'light',
     company: "Hunny's Taste",
     heading: 'A food brand website build for ordering',
@@ -107,6 +112,7 @@ const ROWS = [
     photoAlt: 'Food brand website',
   },
   {
+    slug: 'hartwell-vine',
     tone: 'dark',
     reversed: true,
     company: 'Hartwell & Vine Solicitors',
@@ -120,6 +126,7 @@ const ROWS = [
     photoAlt: 'AI case intake screen',
   },
   {
+    slug: 'simply-carers',
     tone: 'light',
     company: 'Simply Carers',
     heading: 'Booking app that fills the no show gap',
@@ -132,6 +139,7 @@ const ROWS = [
     photoAlt: 'Care booking app',
   },
   {
+    slug: 'immersa',
     tone: 'blue',
     reversed: true,
     company: 'Immersa (Nirvana VR)',
@@ -149,6 +157,18 @@ const ROWS = [
 export default function CaseStudies() {
   const [active, setActive] = useState('All');
   const visible = active === 'All' ? ROWS : ROWS.filter((r) => categoryOf(r) === active);
+
+  // The rows don't exist until React mounts, so the browser's native
+  // #hash scroll (e.g. /case-studies#hartwell-vine) fires too early.
+  // Re-run it once the rows are in the DOM.
+  useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView();
+    });
+  }, []);
 
   return (
     <main>
