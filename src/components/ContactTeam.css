@@ -24,8 +24,14 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.cteam-name {
+.cteam-tag {
   position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cteam-tag .cteam-avatar { position: static; }
+.cteam-name {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
@@ -44,7 +50,6 @@
   line-height: 22px;
   color: #6b6c70;
 }
-.cteam-name--founder { left: 941px; top: 690px; }
 
 .cteam-center {
   position: absolute;
@@ -86,7 +91,7 @@
 }
 @media (max-width: 1100px) {
   .cteam-stage { height: 620px; }
-  .cteam-ring, .cteam-avatar, .cteam-name { display: none; }
+  .cteam-ring, .cteam-avatar, .cteam-name, .cteam-tag { display: none; }
   .cteam-center {
     position: static;
     width: 100%;

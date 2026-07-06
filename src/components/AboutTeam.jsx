@@ -40,13 +40,13 @@ export default function AboutTeam() {
           </div>
 
           <div className="at-card">
-            <div className="at-card-img">
-              <img src="/figma/about/founder.png" alt="Founder of Rifby AI" />
+            <div className="at-card-img at-card-img--avatar">
+              <img src="/figma/home/team/joseph-idowu.png" alt="Joseph Idowu, AI Business Analyst at Rifby" />
             </div>
             <div className="at-card-body">
               <div className="at-card-meta">
                 <span className="at-card-name">Joseph Idowu <VerifiedBadge /></span>
-                <span className="at-card-role">Founder &amp; CEO, Rifby LTD</span>
+                <span className="at-card-role">AI Business Analyst, Rifby LTD</span>
               </div>
               <div className="at-card-actions">
                 <a className="at-btn at-btn-light" href="https://www.linkedin.com/company/rifby" target="_blank" rel="noreferrer">

@@ -8,13 +8,14 @@ const RINGS = [
   { w: 495, x: 489, y: 576 },
 ];
 
-const AVATARS = [
-  { src: 'avatar-top', size: 108, x: 488, y: 120 },
-  { src: 'avatar-left', size: 146, x: 92, y: 325 },
-  { src: 'avatar-lowerleft', size: 103, x: 261, y: 630 },
-  { src: 'avatar-upperright', size: 108, x: 913, y: 228 },
-  { src: 'avatar-right', size: 146, x: 1274, y: 292 },
-  { src: 'avatar-lowerright', size: 108, x: 1179, y: 679 },
+const AV = (n) => `/figma/home/team/${n}.png`;
+
+// Real team roster (shared photos with the Home team section).
+const MEMBERS = [
+  { name: 'Shedrack Mekoma', role: 'Project Manager', img: 'shedrack-mekoma', size: 108, x: 488, y: 120 },
+  { name: 'Amara Okafor', role: 'AI Engineer', img: 'amara-okafor', size: 146, x: 70, y: 470 },
+  { name: 'Dimitrios Ladas', role: 'Technical Lead', img: 'dimitrios-ladas', size: 146, x: 1004, y: 292, labelFirst: true },
+  { name: 'Joseph Idowu', role: 'AI Business Analyst', img: 'joseph-idowu', size: 108, x: 941, y: 679, labelFirst: true },
 ];
 
 export default function ContactTeam() {
@@ -29,21 +30,28 @@ export default function ContactTeam() {
           />
         ))}
 
-        {AVATARS.map((a) => (
-          <img
-            key={a.src}
-            className="cteam-avatar"
-            src={`/figma/contact/${a.src}.png`}
-            alt=""
-            aria-hidden="true"
-            style={{ width: a.size, height: a.size, left: a.x, top: a.y }}
-          />
+        {MEMBERS.map((m) => (
+          <div key={m.img} className="cteam-tag" style={{ left: m.x, top: m.y }}>
+            {m.labelFirst && (
+              <span className="cteam-name">
+                {m.name}
+                <span className="cteam-name-role">{m.role}</span>
+              </span>
+            )}
+            <img
+              className="cteam-avatar"
+              src={AV(m.img)}
+              alt={`${m.name}, ${m.role}`}
+              style={{ width: m.size, height: m.size }}
+            />
+            {!m.labelFirst && (
+              <span className="cteam-name">
+                {m.name}
+                <span className="cteam-name-role">{m.role}</span>
+              </span>
+            )}
+          </div>
         ))}
-
-        <span className="cteam-name cteam-name--founder">
-          Joseph Idowu
-          <span className="cteam-name-role">Founder &amp; CEO</span>
-        </span>
 
         <div className="cteam-center">
           <h2 className="cteam-h2">Our <span className="cteam-hl">Team</span></h2>
