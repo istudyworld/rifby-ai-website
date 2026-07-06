@@ -13,21 +13,34 @@ export default function Team() {
         <span className="team-ring" style={{ width: 951, height: 951, left: 261, top: 393 }} />
         <span className="team-ring" style={{ width: 495, height: 495, left: 489, top: 576 }} />
 
-        {/* floating avatars */}
-        <img className="team-av" src={AV('team-1')} alt="Team member" style={{ width: 146, height: 146, left: 92, top: 325 }} />
-        <img className="team-av" src={AV('team-2')} alt="Team member" style={{ width: 103, height: 103, left: 261, top: 630 }} />
-        <img className="team-av" src={AV('team-3')} alt="Team member" style={{ width: 146, height: 146, left: 1274, top: 292 }} />
-        <img className="team-av" src={AV('team-4')} alt="Team member" style={{ width: 108, height: 108, left: 913, top: 228 }} />
-
-        {/* labelled avatars — only documented team member is the founder;
-            photo is still a placeholder pending a real headshot */}
-        <img className="team-av" src={AV('team-annie')} alt="Team member" style={{ width: 108, height: 108, left: 488, top: 120 }} />
-        <div className="team-tag team-tag-right" style={{ left: 941, top: 679 }}>
+        {/* labelled team members */}
+        <div className="team-tag" style={{ left: 488, top: 120 }}>
+          <img className="team-av" src={AV('shedrack-mekoma')} alt="Shedrack Mekoma, Project Manager" style={{ width: 108, height: 108 }} />
+          <span className="team-name">
+            Shedrack Mekoma
+            <span className="team-name-role">Project Manager</span>
+          </span>
+        </div>
+        <div className="team-tag" style={{ left: 70, top: 470 }}>
+          <img className="team-av" src={AV('amara-okafor')} alt="Amara Okafor, AI Engineer" style={{ width: 146, height: 146 }} />
+          <span className="team-name">
+            Amara Okafor
+            <span className="team-name-role">AI Engineer</span>
+          </span>
+        </div>
+        <div className="team-tag" style={{ left: 1004, top: 292 }}>
+          <span className="team-name">
+            Dimitrios Ladas
+            <span className="team-name-role">Technical Lead</span>
+          </span>
+          <img className="team-av" src={AV('dimitrios-ladas')} alt="Dimitrios Ladas, Technical Lead" style={{ width: 146, height: 146 }} />
+        </div>
+        <div className="team-tag" style={{ left: 941, top: 679 }}>
           <span className="team-name">
             Joseph Idowu
-            <span className="team-name-role">Founder &amp; CEO</span>
+            <span className="team-name-role">AI Business Analyst</span>
           </span>
-          <img className="team-av" src={AV('team-john')} alt="Joseph Idowu, Founder and CEO of Rifby" style={{ width: 108, height: 108 }} />
+          <img className="team-av" src={AV('joseph-idowu')} alt="Joseph Idowu, AI Business Analyst" style={{ width: 108, height: 108 }} />
         </div>
 
         {/* center content */}
