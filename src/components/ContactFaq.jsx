@@ -16,7 +16,11 @@ function Toggle({ open }) {
 const ITEMS = [
   {
     q: 'How long until something ships',
-    a: 'Pricing is bespoke per engagement, agreed during discovery. After the discovery phase we agree on a fixed monthly rate tied to a TMAP with clear deliverables. Typical engagements run 3-6 months.',
+    a: 'You see a working proof of concept within three weeks of kickoff, not a slide deck. We prototype the highest-leverage agent first and demo progress every week. Typical engagements run 3-6 months.',
+  },
+  {
+    q: 'What does it cost',
+    a: 'Pricing is bespoke per engagement, agreed during discovery. After the discovery phase we agree on a fixed monthly rate tied to a TMAP with clear deliverables.',
   },
   {
     q: 'Do I own what we build',

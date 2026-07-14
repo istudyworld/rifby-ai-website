@@ -29,7 +29,7 @@ const CARDS = [
 ];
 
 const ICON = (n) => `/figma/home/icons/${n}.svg`;
-const IMG = (n) => `/figma/home/cards/${n}.png`;
+const IMG = (n) => `/figma/home/cards/${n}.webp`;
 
 export default function SixThings() {
   return (

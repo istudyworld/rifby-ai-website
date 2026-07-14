@@ -34,7 +34,7 @@ export default function AboutTeam() {
 
           <div className="at-card">
             <div className="at-card-img at-card-img--avatar">
-              <img src="/figma/home/team/joseph-idowu.png" alt="Joseph Idowu, AI Business Analyst at Rifby" />
+              <img src="/figma/home/team/joseph-idowu.webp" alt="Joseph Idowu, AI Business Analyst at Rifby" />
             </div>
             <div className="at-card-body">
               <div className="at-card-meta">
@@ -54,7 +54,7 @@ export default function AboutTeam() {
         </div>
 
         <div className="at-photo">
-          <img src="/figma/about/team-photo.png" alt="Rifby AI team at work" />
+          <img src="/figma/about/team-photo.webp" alt="Rifby AI team at work" />
         </div>
       </div>
     </section>

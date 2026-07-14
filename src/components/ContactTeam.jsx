@@ -8,13 +8,12 @@ const RINGS = [
   { w: 495, x: 489, y: 576 },
 ];
 
-const AV = (n) => `/figma/home/team/${n}.png`;
+const AV = (n) => `/figma/home/team/${n}.webp`;
 
 // Real team roster (shared photos with the Home team section).
 const MEMBERS = [
   { name: 'Shedrack Mekoma', role: 'Project Manager', img: 'shedrack-mekoma', size: 108, x: 488, y: 120 },
   { name: 'Imran Hossen', role: 'Digital Product Designer', img: 'imran-hossen', size: 120, x: 170, y: 260 },
-  { name: 'Amara Okafor', role: 'AI Engineer', img: 'amara-okafor', size: 146, x: 70, y: 470 },
   { name: 'Dimitrios Ladas', role: 'Technical Lead', img: 'dimitrios-ladas', size: 146, x: 1004, y: 292, labelFirst: true },
   { name: 'Joseph Idowu', role: 'AI Business Analyst', img: 'joseph-idowu', size: 108, x: 941, y: 679, labelFirst: true },
 ];

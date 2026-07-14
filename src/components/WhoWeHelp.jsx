@@ -18,7 +18,7 @@ export default function WhoWeHelp() {
   return (
     <section className="wwh">
       <div className="container wwh-inner">
-        <h1 className="wwh-title">Who We <span className="wwh-hl">Help</span></h1>
+        <h2 className="wwh-title">Who We <span className="wwh-hl">Help</span></h2>
         <p className="wwh-lede">Believe in a better way to work.</p>
         <p className="wwh-body">
           Our AI automation and agentic solutions are designed to inspire, engage,

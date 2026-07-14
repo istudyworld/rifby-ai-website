@@ -5,7 +5,7 @@ export default function ServicesHero() {
   return (
     <div className="shero-grid">
       <div className="shero-photo">
-        <img src="/figma/services/hero.png" alt="A founder working at a laptop" />
+        <img src="/figma/services/hero.webp" alt="A founder working at a laptop" />
       </div>
 
       <div className="shero-text">

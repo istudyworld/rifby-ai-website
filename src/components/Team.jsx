@@ -1,7 +1,7 @@
 import React from 'react';
 import './Team.css';
 
-const AV = (n) => `/figma/home/team/${n}.png`;
+const AV = (n) => `/figma/home/team/${n}.webp`;
 
 export default function Team() {
   return (
@@ -26,13 +26,6 @@ export default function Team() {
           <span className="team-name">
             Imran Hossen
             <span className="team-name-role">Digital Product Designer</span>
-          </span>
-        </div>
-        <div className="team-tag" style={{ left: 70, top: 470 }}>
-          <img className="team-av" src={AV('amara-okafor')} alt="Amara Okafor, AI Engineer" style={{ width: 146, height: 146 }} />
-          <span className="team-name">
-            Amara Okafor
-            <span className="team-name-role">AI Engineer</span>
           </span>
         </div>
         <div className="team-tag" style={{ left: 1004, top: 292 }}>

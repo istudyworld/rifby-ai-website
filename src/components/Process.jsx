@@ -48,7 +48,7 @@ export default function Process() {
           {/* Discover — wide card */}
           <div className="step-discover">
             <div className="step-discover-img">
-              <img src="/figma/home/step-discover.png" alt="Discovery workshop" />
+              <img src="/figma/home/step-discover.webp" alt="Discovery workshop" />
             </div>
             <div className="step-discover-body">
               <div className="step-text">
@@ -70,7 +70,7 @@ export default function Process() {
             {SMALL_STEPS.map((s) => (
               <div className={`step-card step-card-${s.tone}`} key={s.title}>
                 <div className="step-card-img">
-                  <img src={`/figma/home/${s.img}.png`} alt={s.title} />
+                  <img src={`/figma/home/${s.img}.webp`} alt={s.title} />
                 </div>
                 <div className="step-card-body">
                   <div className="step-text">

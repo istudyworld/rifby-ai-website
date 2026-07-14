@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import './Hero.css';
 
-function Star() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-      <path d="M9 0.5l2.35 5.02 5.51.66-4.07 3.74 1.08 5.43L9 13.9l-4.85 1.95 1.08-5.43L1.16 6.68l5.51-.66L9 .5z" fill="var(--star)" />
-    </svg>
-  );
-}
-
 function PlayBadge() {
   return (
     <span className="watch-play">
@@ -31,7 +23,7 @@ export default function Hero() {
             <span className="hero-line hero-line-inline">
               <img
                 className="hero-inline-avatars"
-                src="/figma/home/hero-inline-avatars.png"
+                src="/figma/home/hero-inline-avatars.webp"
                 alt="Team avatars"
               />
               <span>Built for Your</span>
@@ -49,29 +41,24 @@ export default function Hero() {
           </div>
         </div>
 
+        {/* Proof points must be verifiable: 6 = the real client case studies
+            on /case-studies (Ahmad & Co, ISW Consulting, Tmtam Studio, Another
+            World Camberley, Hunny's Taste, Immersa). */}
         <div className="hero-proof">
-          <span className="hero-proof-label">Trusted Client</span>
+          <span className="hero-proof-label">Businesses we have built for</span>
           <div className="hero-proof-row">
-            <img
-              className="hero-proof-avatars"
-              src="/figma/home/trusted-avatars.png"
-              alt="Customer avatars"
-            />
-            <span className="hero-proof-num">2M</span>
-          </div>
-          <div className="hero-stars">
-            {Array.from({ length: 5 }).map((_, i) => <Star key={i} />)}
-            <span className="hero-stars-text">20K+ Customer</span>
+            <span className="hero-proof-num">6</span>
+            <a className="hero-proof-cta" href="/case-studies">See the case studies &rarr;</a>
           </div>
         </div>
       </div>
 
       {/* RIGHT: hero image + watch-a-video pill */}
       <div className="hero-right">
-        <img className="hero-main" src="/figma/home/hero-main.png" alt="Team collaborating in a meeting" />
+        <img className="hero-main" src="/figma/home/hero-main.webp" alt="Team collaborating in a meeting" />
         <button className="watch-pill" type="button" onClick={() => setVideoOpen(true)}>
           <span className="watch-thumb">
-            <img src="/figma/home/watch-thumb.png" alt="" />
+            <img src="/figma/home/watch-thumb.webp" alt="" />
             <PlayBadge />
           </span>
           <span className="watch-label">Watch a Video</span>

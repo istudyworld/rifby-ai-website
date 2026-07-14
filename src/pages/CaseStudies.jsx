@@ -49,7 +49,7 @@ const ROWS = [
       { big: '20h', small: 'Saved/week' },
       { big: '0', small: 'Missed Invoice' },
     ],
-    photo: '/figma/cases/photo1.png',
+    photo: '/figma/cases/photo1.webp',
     photoAlt: 'Accounting work assisted by AI',
   },
   {
@@ -61,7 +61,7 @@ const ROWS = [
     heading: (
       <>
         Client <span className="case-hl-box">Invoice</span> automated end to end
-        <img className="case-h-strip" src="/figma/cases/strip2.png" alt="" aria-hidden="true" />
+        <img className="case-h-strip" src="/figma/cases/strip2.webp" alt="" aria-hidden="true" />
       </>
     ),
     tags: ['AI & Automation', 'Education'],
@@ -69,7 +69,7 @@ const ROWS = [
       { big: '15hrs', small: 'Saved/week' },
       { big: '0', small: 'Missed Invoice' },
     ],
-    photo: '/figma/cases/photo2.png',
+    photo: '/figma/cases/photo2.webp',
     photoAlt: 'Invoicing automation in use',
   },
   {
@@ -82,7 +82,7 @@ const ROWS = [
       { big: 'iOS + Android', small: 'Shipped platforms' },
       { big: '6 wk', small: 'To first release' },
     ],
-    photo: '/figma/cases/photo3.png',
+    photo: '/figma/cases/photo3.webp',
     photoAlt: 'Mobile companion app',
   },
   {
@@ -96,7 +96,7 @@ const ROWS = [
       { big: '8hrs', small: 'Saved/Week' },
       { big: '4', small: 'Platforms Synced' },
     ],
-    photo: '/figma/cases/photo4.png',
+    photo: '/figma/cases/photo4.webp',
     photoAlt: 'Social content scheduling',
   },
   {
@@ -109,7 +109,7 @@ const ROWS = [
       { big: 'Brand', small: 'Delivers', lightSmall: true },
       { big: 'Build', small: 'Delivers', lightSmall: true },
     ],
-    photo: '/figma/cases/photo5.png',
+    photo: '/figma/cases/photo5.webp',
     photoAlt: 'Food brand website',
   },
   {
@@ -123,7 +123,7 @@ const ROWS = [
       { big: '12min', small: 'Per intake (was 45)' },
       { big: '96%', small: 'Routing accuracy' },
     ],
-    photo: '/figma/cases/photo6.png',
+    photo: '/figma/cases/photo6.webp',
     photoAlt: 'AI case intake screen',
   },
   {
@@ -136,7 +136,7 @@ const ROWS = [
       { big: '-38%', small: 'No show rate' },
       { big: '$24k', small: 'Recovered' },
     ],
-    photo: '/figma/cases/photo7.png',
+    photo: '/figma/cases/photo7.webp',
     photoAlt: 'Care booking app',
   },
   {
@@ -150,7 +150,7 @@ const ROWS = [
       { big: '3', small: 'Channels staged' },
       { big: '1-click', small: 'Approve & publish' },
     ],
-    photo: '/figma/cases/photo8.jpg',
+    photo: '/figma/cases/photo8.webp',
     photoAlt: 'ImmersaLab immersive learning visual',
   },
 ];

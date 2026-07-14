@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run build:ssr && node scripts/prerender.mjs",
+    "build:ssr": "vite build --ssr src/entries/ssr.jsx --outDir .prerender --emptyOutDir",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "playwright": "^1.61.1",
+    "sharp": "^0.35.3",
     "vite": "^6.0.7"
   }
 }
