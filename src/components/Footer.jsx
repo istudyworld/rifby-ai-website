@@ -66,7 +66,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <span className="footer-line" />
           <div className="footer-bottom-row">
-            <span className="footer-copy">© 2026 RIFBY LTD</span>
+            <span className="footer-copy">© 2026 RIFBY LTD · London, United Kingdom</span>
             <span className="footer-legal">
               <a href="/privacy">Privacy</a>
               <span className="footer-dot" />

@@ -11,7 +11,7 @@ const BLOCKS = [
     heading: { highlight: 'AI Strategy', rest: ' clarity before code' },
     lead: 'A two-week engagement that turns "we should use AI somewhere" into a ranked, costed, de-risked plan.',
     body: 'We map your operations end to end, find the three or four places AI actually earns its keep, and hand back a plan your team can act on with or without us.',
-    image: '/figma/services/imgs-strategy.png',
+    image: '/figma/services/imgs-strategy.webp',
     imageAlt: 'AI strategy work in progress',
     tags: ['Miro', 'Motion', 'OpenAI', 'Custom survey tooling'],
     whatYouGet: [
@@ -38,7 +38,7 @@ const BLOCKS = [
     heading: { highlight: 'Custom Automation', rest: ' built to fit owned forever' },
     lead: 'Production-grade AI workflows wired into the tools you already use. No middleware tax, no vendor lock-in.',
     body: "We design, build, and ship bespoke automation AI agents, n8n workflows, and internal dashboards that replace the spreadsheets, inboxes, and copy-paste tax eating your team's week.",
-    image: '/figma/services/imgs-automation.png',
+    image: '/figma/services/imgs-automation.webp',
     imageAlt: 'Automation workflows and dashboards',
     tags: ['n8n', 'OpenAI', 'Claude', 'Postgres', 'Retool', 'Twilio', 'Stripe', 'HubSpot'],
     whatYouGet: [
@@ -64,7 +64,7 @@ const BLOCKS = [
     heading: { highlight: 'Custom Software', rest: ' built around you owned by you', box: true },
     lead: 'Bespoke web apps, internal tools, and client portals for when off-the-shelf software cannot do the job.',
     body: 'When a spreadsheet or a generic SaaS tool is holding your team back, we design and build production-grade software on a modern stack: web apps, internal tools, dashboards, and customer portals. Documented, deployed, and yours at handover.',
-    image: '/figma/services/imgs-software.png',
+    image: '/figma/services/imgs-software.webp',
     imageAlt: 'Custom software design and build',
     tags: ['Next.js', 'React', 'Node', 'Postgres', 'Vercel', 'Stripe'],
     whatYouGet: [
@@ -91,7 +91,7 @@ const BLOCKS = [
     heading: { highlight: 'Data-Driven', rest: ' Insights turn logs into leverage.' },
     lead: 'Dashboards and analytics pipelines that turn the data your ops already generate into decisions the business can act on.',
     body: 'Most teams sit on a goldmine of operational data nobody reads. We build the pipelines, models, and dashboards that surface the two or three numbers that actually move the business.',
-    image: '/figma/services/imgs-data.png',
+    image: '/figma/services/imgs-data.webp',
     imageAlt: 'Analytics dashboards and pipelines',
     tags: ['BigQuery / Postgres', 'dbt', 'Metabase', 'Python', 'n8n'],
     whatYouGet: [

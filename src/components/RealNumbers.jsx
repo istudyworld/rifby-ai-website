@@ -20,7 +20,7 @@ export default function RealNumbers() {
     <section className="real-numbers">
       <div className="container rn-inner">
         <div className="rn-photo">
-          <img src="/figma/home/real-numbers.png" alt="Team reviewing business data together" />
+          <img src="/figma/home/real-numbers.webp" alt="Team reviewing business data together" />
         </div>
 
         <div className="rn-right">

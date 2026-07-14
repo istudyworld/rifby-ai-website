@@ -28,7 +28,7 @@ export default function AboutServices() {
           {/* AI Strategy feature row */}
           <div className="asvc-feature">
             <div className="asvc-feature-img">
-              <img src="/figma/about/svc-strategy.png" alt="AI strategy workshop" />
+              <img src="/figma/about/svc-strategy.webp" alt="AI strategy workshop" />
             </div>
             <div className="asvc-feature-body">
               <span className="asvc-badge">Discovery &amp; TMAP</span>
@@ -47,7 +47,7 @@ export default function AboutServices() {
             {CARDS.map((c) => (
               <article className="asvc-card" key={c.title}>
                 <div className="asvc-card-img">
-                  <img src={`/figma/about/${c.img}.png`} alt={c.title} />
+                  <img src={`/figma/about/${c.img}.webp`} alt={c.title} />
                 </div>
                 <div className="asvc-card-body">
                   <span className="asvc-badge">{c.badge}</span>

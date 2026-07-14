@@ -18,7 +18,7 @@ export default function CasesHero({ categories = ['All'], active = 'All', onSele
         </div>
 
         <div className="chero-photo">
-          <img src="/figma/cases/hero.png" alt="The Rifby AI team working with a client" />
+          <img src="/figma/cases/hero.webp" alt="The Rifby AI team working with a client" />
         </div>
       </div>
 

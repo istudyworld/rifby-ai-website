@@ -31,28 +31,78 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": "https://rifby.ai/contact#page",
-    "url": "https://rifby.ai/contact",
-    "name": "Contact — Rifby AI",
-    "description": "Book a 30-minute strategy call with Rifby AI.",
-    "inLanguage": "en-GB",
-    "mainEntity": {
-      "@type": "Organization",
-      "@id": "https://rifby.ai/#organization",
-      "name": "Rifby AI",
-      "url": "https://rifby.ai/",
-      "email": "info@rifby.ai",
-      "telephone": "+44 1483 963255",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "sales",
-        "email": "info@rifby.ai",
-        "telephone": "+44 1483 963255",
-        "areaServed": "GB",
-        "availableLanguage": "English"
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "@id": "https://rifby.ai/contact#page",
+        "url": "https://rifby.ai/contact",
+        "name": "Contact — Rifby AI",
+        "description": "Book a 30-minute strategy call with Rifby AI.",
+        "inLanguage": "en-GB",
+        "mainEntity": {
+          "@type": "Organization",
+          "@id": "https://rifby.ai/#organization",
+          "name": "Rifby AI",
+          "url": "https://rifby.ai/",
+          "email": "info@rifby.ai",
+          "telephone": "+44 1483 963255",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "info@rifby.ai",
+            "telephone": "+44 1483 963255",
+            "areaServed": "GB",
+            "availableLanguage": "English"
+          }
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://rifby.ai/contact#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How long until something ships?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You see a working proof of concept within three weeks of kickoff, not a slide deck. We prototype the highest-leverage agent first and demo progress every week. Typical engagements run 3-6 months."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is bespoke per engagement, agreed during discovery. After the discovery phase we agree on a fixed monthly rate tied to a TMAP with clear deliverables."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I own what we build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You do, on day one. Every line of code, every workflow, and full documentation is yours. We hand off runbooks and training so your team can run the system without us."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I don't know what to automate yet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "That's what the call is for. We map your workflow, find the highest-leverage bottleneck, and tell you what is worth automating first, with or without us."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support what you build?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We offer optional retainers for monitoring, optimisation, and expansion, but you are never locked in. The system is yours to run in-house whenever you choose."
+            }
+          }
+        ]
       }
-    }
+    ]
   }
   </script>
 </head>

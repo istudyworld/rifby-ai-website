@@ -11,19 +11,19 @@ export default function AboutHero() {
   return (
     <div className="container ahero-inner">
         <div className="ahero-photo">
-          <img src="/figma/about/hero.png" alt="Rifby AI working with a client" />
+          <img src="/figma/about/hero.webp" alt="Rifby AI working with a client" />
         </div>
 
         <div className="ahero-right">
           <h1 className="ahero-h1">
             <span className="ahero-line">
               The Smarter
-              <img className="ahero-chip ahero-chip1" src="/figma/about/chip1.png" alt="" aria-hidden="true" />
+              <img className="ahero-chip ahero-chip1" src="/figma/about/chip1.webp" alt="" aria-hidden="true" />
               AI
             </span>
             <span className="ahero-line">
               For Small
-              <img className="ahero-chip ahero-chip2" src="/figma/about/chip2.png" alt="" aria-hidden="true" />
+              <img className="ahero-chip ahero-chip2" src="/figma/about/chip2.webp" alt="" aria-hidden="true" />
               Business
             </span>
             <span className="ahero-line">Growth</span>
