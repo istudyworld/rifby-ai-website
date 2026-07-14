@@ -11,10 +11,8 @@ const out = resolve(root, 'screenshots/review');
 mkdirSync(out, { recursive: true });
 
 const SHOTS = [
-  { page: 'index.html', sel: '.hero-inner', name: 'home-hero' },
-  { page: 'index.html', sel: '.team', name: 'home-team' },
-  { page: 'contact.html', sel: '.cteam', name: 'contact-team' },
-  { page: 'contact.html', sel: '.cfaq', name: 'contact-faq' },
+  { page: 'case-studies.html', sel: '.wwh', name: 'cases-whowehelp' },
+  { page: 'index.html', sel: '.testi', name: 'home-testimonial' },
 ];
 
 const server = await preview({ root, preview: { port: 5199, strictPort: true, open: false } });
