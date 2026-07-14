@@ -67,20 +67,6 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      'Client intake used to take forty-five minutes per case. Rifby’s AI triage does it in twelve with 96% routing accuracy. Our fee earners feel the difference every day.',
-    role: 'Practice Manager',
-    company: 'Hartwell & Vine Solicitors',
-    slug: 'hartwell-vine',
-  },
-  {
-    quote:
-      'No-shows were quietly draining the business. The booking app Rifby built cut them by 38% and recovered around $24k in bookings.',
-    role: 'Operations Lead',
-    company: 'Simply Carers',
-    slug: 'simply-carers',
-  },
-  {
-    quote:
       'Rifby drafts our branded content across three channels. We review, approve in one click, and it publishes. Our social presence stays alive without stealing hours from the business.',
     role: 'Founder',
     company: 'Immersa (Nirvana VR)',

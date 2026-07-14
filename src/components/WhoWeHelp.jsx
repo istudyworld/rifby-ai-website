@@ -8,9 +8,9 @@ const SECTORS = [
   { label: 'Construction', tone: 'yellow' },
   { label: 'Education', tone: 'orange', href: '#isw-consulting' },
   { label: 'Finance', tone: 'blue', href: '#ahmad-co-accountant' },
-  { label: 'Healthcare', tone: 'red', href: '#simply-carers' },
+  { label: 'Healthcare', tone: 'red' },
   { label: 'Retail', tone: 'green', href: '#hunnys-taste' },
-  { label: 'Professional Services', tone: 'yellow', href: '#hartwell-vine' },
+  { label: 'Professional Services', tone: 'yellow' },
   { label: 'SMEs', tone: 'sky' },
 ];
 

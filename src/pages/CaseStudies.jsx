@@ -113,33 +113,6 @@ const ROWS = [
     photoAlt: 'Food brand website',
   },
   {
-    slug: 'hartwell-vine',
-    tone: 'dark',
-    reversed: true,
-    company: 'Hartwell & Vine Solicitors',
-    heading: 'AI intake that triages cases in minutes',
-    tags: ['AI automation', 'Legal'],
-    stats: [
-      { big: '12min', small: 'Per intake (was 45)' },
-      { big: '96%', small: 'Routing accuracy' },
-    ],
-    photo: '/figma/cases/photo6.webp',
-    photoAlt: 'AI case intake screen',
-  },
-  {
-    slug: 'simply-carers',
-    tone: 'light',
-    company: 'Simply Carers',
-    heading: 'Booking app that fills the no show gap',
-    tags: ['App development', 'Healthcare'],
-    stats: [
-      { big: '-38%', small: 'No show rate' },
-      { big: '$24k', small: 'Recovered' },
-    ],
-    photo: '/figma/cases/photo7.webp',
-    photoAlt: 'Care booking app',
-  },
-  {
     slug: 'immersa',
     tone: 'blue',
     reversed: true,
@@ -160,7 +133,7 @@ export default function CaseStudies() {
   const visible = active === 'All' ? ROWS : ROWS.filter((r) => categoryOf(r) === active);
 
   // The rows don't exist until React mounts, so the browser's native
-  // #hash scroll (e.g. /case-studies#hartwell-vine) fires too early.
+  // #hash scroll (e.g. /case-studies#ahmad-co-accountant) fires too early.
   // Re-run it once the rows are in the DOM.
   useEffect(() => {
     const id = window.location.hash.slice(1);

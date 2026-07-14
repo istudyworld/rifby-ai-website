@@ -52,7 +52,7 @@ const PROBLEMS = [
     heading: 'Stop Losing Leads to Slow Follow-Up',
     body: 'Every slow reply is a deal quietly walking out the door. Rifby builds AI agents that qualify, triage, and respond to every enquiry in minutes, around the clock, so no lead goes cold while your team is busy. See how faster follow-up turns into won business.',
     cta: 'Respond to Every Lead in Minutes',
-    href: '/case-studies#hartwell-vine',
+    href: '/services#custom-automation',
   },
   {
     accent: 'green',
