@@ -1,0 +1,89 @@
+.assess-faq {
+  background: var(--bg);
+  padding: 96px 0;
+}
+.assess-faq-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  align-items: flex-start;
+}
+.assess-faq-intro {
+  width: 423px;
+  flex-shrink: 0;
+}
+.assess-faq-title {
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: #0f0f10;
+}
+.assess-faq-sub {
+  margin-top: 18px;
+  max-width: 300px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #22252b;
+}
+
+.assess-faq-list { flex: 1; max-width: 831px; }
+.assess-faq-item { position: relative; }
+.assess-faq-q {
+  padding-top: 24px;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #18181a;
+}
+.assess-faq-item:first-child .assess-faq-q { padding-top: 0; }
+.assess-faq-a {
+  margin-top: 12px;
+  padding-bottom: 24px;
+  font-size: 18px;
+  line-height: 29px;
+  color: #3b3c3f;
+}
+.assess-faq-line { display: block; height: 1px; background: #d2d4d7; }
+
+/* ---- final CTA ---- */
+.assess-final {
+  margin-top: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.assess-final-h {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  color: #0f0f10;
+}
+.assess-final-p {
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3b3c3f;
+}
+.assess-final-cta { margin-top: 30px; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .assess-faq { padding: 56px 0; }
+  .assess-faq-inner { flex-direction: column; gap: 32px; }
+  .assess-faq-intro { width: 100%; }
+  .assess-faq-title { font-size: clamp(38px, 10vw, 72px); line-height: 1.08; }
+  .assess-faq-sub { margin-top: 10px; max-width: 100%; font-size: 17px; line-height: 26px; }
+  .assess-faq-q { font-size: 19px; line-height: 25px; padding-top: 18px; }
+  .assess-faq-a { font-size: 16px; line-height: 25px; margin-top: 8px; padding-bottom: 18px; }
+  .assess-final { margin-top: 56px; }
+  .assess-final-h { font-size: clamp(28px, 7.5vw, 48px); line-height: 1.15; }
+  .assess-final-p { font-size: 17px; line-height: 26px; }
+  .assess-final-cta { margin-top: 22px; }
+}
+@media (max-width: 600px) {
+  .assess-final-cta { width: 100%; }
+}

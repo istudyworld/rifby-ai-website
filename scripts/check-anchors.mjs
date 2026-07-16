@@ -12,13 +12,14 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PAGES = [
   'index.html', 'about.html', 'services.html', 'case-studies.html',
-  'contact.html', 'problems.html', 'privacy.html', 'terms.html',
+  'contact.html', 'problems.html', 'assessment.html', 'privacy.html', 'terms.html',
 ];
 // Clean URL -> built file, mirrors vercel.json cleanUrls + vite.config cleanUrls().
 const ROUTE = {
   '/': 'index.html', '/about': 'about.html', '/services': 'services.html',
   '/case-studies': 'case-studies.html', '/contact': 'contact.html',
-  '/problems': 'problems.html', '/privacy': 'privacy.html',
+  '/problems': 'problems.html', '/assessment': 'assessment.html',
+  '/privacy': 'privacy.html',
   '/terms': 'terms.html', '/cookies': 'privacy.html',
 };
 
