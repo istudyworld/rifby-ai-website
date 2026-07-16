@@ -1,11 +1,11 @@
 import React from 'react';
 import './AssessFaq.css';
-import { scrollToApply } from './AssessHero.jsx';
+import { BOOKING_URL } from './AssessHero.jsx';
 
 const ITEMS = [
   {
     q: 'Is this actually free?',
-    a: 'Yes. 8 per month, application required.',
+    a: 'Yes. 8 per month, first come, first served.',
   },
   {
     q: 'Will you try to sell me something?',
@@ -31,7 +31,7 @@ export default function AssessFaq() {
       <div className="container assess-faq-inner">
         <div className="assess-faq-intro">
           <h2 className="assess-faq-title">FAQ</h2>
-          <p className="assess-faq-sub">Straight answers before you apply</p>
+          <p className="assess-faq-sub">Straight answers before you book</p>
         </div>
 
         <div className="assess-faq-list">
@@ -47,9 +47,9 @@ export default function AssessFaq() {
 
       <div className="container assess-final">
         <h2 className="assess-final-h">Ready to find your 5 hours?</h2>
-        <p className="assess-final-p">Apply for one of this month&rsquo;s free assessments.</p>
-        <a className="btn btn-primary btn-lg assess-final-cta" href="#apply" onClick={scrollToApply}>
-          Apply now &rarr;
+        <p className="assess-final-p">Book one of this month&rsquo;s free assessments.</p>
+        <a className="btn btn-primary btn-lg assess-final-cta" href={BOOKING_URL} target="_blank" rel="noreferrer">
+          Book your call &rarr;
         </a>
       </div>
     </section>
