@@ -14,7 +14,7 @@ export default function AssessHero() {
           We&rsquo;ll show you exactly how — free.
         </h1>
         <p className="assess-hero-lede">
-          The Rifby AI Opportunity Assessment is completely free for 8 businesses
+          The Rifby AI Audit Assessment is completely free for 8 businesses
           each month (it&rsquo;s normally £799). One 30-minute conversation, and we
           hand you a written plan: the exact AI and software tools that fit your
           business, what they cost, and how many hours they give you back.
