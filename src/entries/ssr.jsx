@@ -7,6 +7,7 @@ import Services from '../pages/Services.jsx';
 import CaseStudies from '../pages/CaseStudies.jsx';
 import Contact from '../pages/Contact.jsx';
 import Problems from '../pages/Problems.jsx';
+import Assessment from '../pages/Assessment.jsx';
 import Privacy from '../pages/Privacy.jsx';
 import Terms from '../pages/Terms.jsx';
 
@@ -20,6 +21,7 @@ export const PAGES = {
   'case-studies.html': CaseStudies,
   'contact.html': Contact,
   'problems.html': Problems,
+  'assessment.html': Assessment,
   'privacy.html': Privacy,
   'terms.html': Terms,
 };

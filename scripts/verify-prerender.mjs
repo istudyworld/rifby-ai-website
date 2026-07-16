@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PAGES = [
   'index.html', 'about.html', 'services.html', 'case-studies.html',
-  'contact.html', 'problems.html', 'privacy.html', 'terms.html',
+  'contact.html', 'problems.html', 'assessment.html', 'privacy.html', 'terms.html',
 ];
 
 // Words present in the static HTML, i.e. what a crawler that runs no JS sees.

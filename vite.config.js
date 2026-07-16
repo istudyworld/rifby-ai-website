@@ -11,6 +11,7 @@ function cleanUrls() {
   const routes = {
     '/about': '/about.html',
     '/problems': '/problems.html',
+    '/assessment': '/assessment.html',
     '/services': '/services.html',
     '/case-studies': '/case-studies.html',
     '/contact': '/contact.html',
@@ -38,6 +39,7 @@ export default defineConfig({
         main: resolve(root, 'index.html'),
         about: resolve(root, 'about.html'),
         problems: resolve(root, 'problems.html'),
+        assessment: resolve(root, 'assessment.html'),
         // Pages are added here as they are built (Figma redesign, page by page):
         services: resolve(root, 'services.html'),
         'case-studies': resolve(root, 'case-studies.html'),

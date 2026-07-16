@@ -1,0 +1,150 @@
+/* Dark details section — same visual system as /problems */
+.assess-details {
+  background: #081a29;
+  padding: 88px 0 96px;
+}
+.assess-details-h {
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+/* ---- 3 step cards ---- */
+.assess-steps {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+.assess-card {
+  position: relative;
+  display: flex;
+  background: #0e2740;
+  border-right: 6px solid var(--assess-accent, var(--blue));
+}
+.assess-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 44px 40px 42px;
+}
+.assess-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--assess-accent, var(--blue));
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+.assess-card--yellow .assess-step-num,
+.assess-card--sky .assess-step-num { color: #0b2036; }
+.assess-card-h {
+  font-size: 27px;
+  line-height: 34px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+.assess-card-desc {
+  font-size: 17px;
+  line-height: 27px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* ---- panels ---- */
+.assess-panel {
+  margin-top: 56px;
+  background: #0e2740;
+  border-right: 6px solid var(--assess-accent, var(--blue));
+  padding: 52px 58px 48px;
+}
+.assess-panel-h {
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+.assess-panel-p {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 29px;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 1100px;
+}
+.assess-panel-p strong { color: #fff; }
+.assess-panel-note {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.66);
+  max-width: 1100px;
+}
+.assess-list {
+  margin-top: 22px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.assess-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.88);
+}
+.assess-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 10px;
+  background: #3eb1ff;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.assess-list strong { color: #fff; }
+
+/* why-free / who-for pair */
+.assess-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+.assess-pair .assess-panel { margin-top: 56px; }
+
+/* accent palette (mirrors /problems) */
+.assess-card--orange, .assess-panel--orange { --assess-accent: #f97316; }
+.assess-card--green,  .assess-panel--green  { --assess-accent: #199f68; }
+.assess-card--yellow, .assess-panel--yellow { --assess-accent: #eda815; }
+.assess-card--sky,    .assess-panel--sky    { --assess-accent: #3eb1ff; }
+
+/* ---- Mobile (<=1024px) ---- */
+@media (max-width: 1024px) {
+  .assess-details { padding: 56px 0 64px; }
+  .assess-details-h { font-size: 30px; line-height: 37px; }
+  .assess-steps { margin-top: 32px; grid-template-columns: 1fr; gap: 24px; }
+  .assess-card { border-right-width: 5px; }
+  .assess-card-body { padding: 30px 26px 30px; gap: 14px; }
+  .assess-card-h { font-size: 22px; line-height: 28px; }
+  .assess-card-desc { font-size: 16px; line-height: 25px; }
+  .assess-panel { margin-top: 28px; padding: 34px 26px 32px; border-right-width: 5px; }
+  .assess-panel-h { font-size: 25px; line-height: 32px; }
+  .assess-panel-p { font-size: 16px; line-height: 25px; }
+  .assess-panel-note { font-size: 15px; line-height: 24px; }
+  .assess-list { margin-top: 16px; gap: 12px; }
+  .assess-list li { font-size: 16px; line-height: 25px; }
+  .assess-pair { grid-template-columns: 1fr; gap: 0; }
+  .assess-pair .assess-panel { margin-top: 28px; }
+}

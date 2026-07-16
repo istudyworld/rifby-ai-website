@@ -11,6 +11,7 @@ const COLUMNS = [
       { label: 'Problems We Solve', href: '/problems' },
       { label: 'Case Studies', href: '/case-studies' },
       { label: 'Services', href: '/services' },
+      { label: 'Free Assessment', href: '/assessment' },
     ],
   },
   {
