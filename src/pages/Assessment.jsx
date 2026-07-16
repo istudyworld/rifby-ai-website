@@ -3,7 +3,6 @@ import Nav from '../components/Nav.jsx';
 import AssessHero from '../components/AssessHero.jsx';
 import AssessDetails from '../components/AssessDetails.jsx';
 import AssessFaq from '../components/AssessFaq.jsx';
-import AssessForm from '../components/AssessForm.jsx';
 import Footer from '../components/Footer.jsx';
 
 export default function Assessment() {
@@ -15,7 +14,6 @@ export default function Assessment() {
       </section>
       <AssessDetails />
       <AssessFaq />
-      <AssessForm />
       <Footer />
     </main>
   );

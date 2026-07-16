@@ -8,7 +8,7 @@ const STEPS = [
     accent: 'orange',
     num: '1',
     heading: 'Tell us where your week goes',
-    body: 'A 45-minute call. No pitch, no jargon — we just map where your business loses time: email, quoting, chasing invoices, admin, scheduling.',
+    body: 'A 30-minute call. No pitch, no jargon — we just map where your business loses time: email, quoting, chasing invoices, admin, scheduling.',
   },
   {
     accent: 'green',
@@ -89,7 +89,7 @@ export default function AssessDetails() {
           <h2 className="assess-panel-h">The Guarantee</h2>
           <p className="assess-panel-p">
             If we can&rsquo;t find you at least <strong>5 hours a week</strong> in genuine
-            time savings, we&rsquo;ll tell you straight — and you&rsquo;ve spent 45
+            time savings, we&rsquo;ll tell you straight — and you&rsquo;ve spent 30
             minutes, nothing more.
           </p>
         </article>
